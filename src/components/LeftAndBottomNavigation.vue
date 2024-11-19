@@ -30,7 +30,7 @@
 
 <script>
   export default {
-    name: 'CustomNavigation',
+    name: 'LeftAndBottomNavigation',
     data: () => ({
       isMobile: false,
       idxSelMainMenuItem: 0,

@@ -24,7 +24,7 @@
         </v-btn>
       </v-app-bar>
 
-      <CustomNavigation />
+      <LeftAndBottomNavigation />
 
     <v-main>
       <router-view />
@@ -34,11 +34,11 @@
 </template>
 
 <script>
-  import CustomNavigation from '@/components/CustomNavigation.vue';
+  import LeftAndBottomNavigation from '@/components/LeftAndBottomNavigation.vue';
   export default {
     data: () => ({}),
     components: {
-      CustomNavigation
+      LeftAndBottomNavigation
     },
   };
 </script>
