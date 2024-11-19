@@ -9,7 +9,6 @@
 
 <script>
   import AccueilAppBar from '@/components/appbars/AccueilAppBar.vue';
-  import GiteAppBar from '@/components/appbars/GiteAppBar.vue';
   import NoAppBar from '@/components/appbars/NoAppBar.vue';
   import AlentourAppBar from '@/components/appbars/AlentoursAppBar.vue';
   import LeftAndBottomNavigation from '@/components/LeftAndBottomNavigation.vue';
@@ -35,7 +34,7 @@
             this.currentAppBarComponent = AccueilAppBar;
             break;
           case '/Gite': 
-            this.currentAppBarComponent = GiteAppBar;
+            this.currentAppBarComponent = NoAppBar;
             break;
           case '/Carte': 
             this.currentAppBarComponent = NoAppBar;
