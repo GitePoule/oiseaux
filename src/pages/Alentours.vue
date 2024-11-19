@@ -33,6 +33,9 @@
         methods: {
           checkHref() {
             this.tab = Object.keys(this.tabs).indexOf(window.location.hash);
+            if (this.tab == -1){
+                this.tab = 0
+            }
           }
         },
     };

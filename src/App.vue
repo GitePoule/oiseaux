@@ -1,20 +1,16 @@
 <template>
-  <v-app>
-       
+  <v-app>   
     <!-- TODO: Passer les items du menus en props-->
     <LeftAndBottomNavigation />
-
     <component :is="currentAppBarComponent"></component>
-
-    <v-main>
-      <router-view />
-    </v-main>
+    <v-main><router-view /></v-main>
   </v-app>
 </template>
 
 <script>
   import AccueilAppBar from '@/components/appbars/AccueilAppBar.vue';
   import GiteAppBar from '@/components/appbars/GiteAppBar.vue';
+  import NoAppBar from '@/components/appbars/NoAppBar.vue';
   import AlentourAppBar from '@/components/appbars/AlentoursAppBar.vue';
   import LeftAndBottomNavigation from '@/components/LeftAndBottomNavigation.vue';
   export default {
@@ -40,6 +36,9 @@
             break;
           case '/Gite': 
             this.currentAppBarComponent = GiteAppBar;
+            break;
+          case '/Carte': 
+            this.currentAppBarComponent = NoAppBar;
             break;
          case '/Alentours':
             this.currentAppBarComponent = AlentourAppBar;

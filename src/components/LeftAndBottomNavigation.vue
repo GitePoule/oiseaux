@@ -43,18 +43,23 @@
       selMainMenuItem: {
           icon: 'mdi-home-group',
           title: 'Bienvenue',
-          value: 'bienvenue'
+          value: ''
       },
       mainMenuItem: [
         {
           icon: 'mdi-home-group',
           title: 'Bienvenue',
-          value: 'bienvenue',
+          value: '/',
         },
         {
           icon: 'mdi-home-map-marker',
           title: 'Votre gîte',
           value: 'gite',
+        },
+        {
+          icon: 'mdi-map',
+          title: 'La carte',
+          value: 'carte',
         },
         {
           icon: 'mdi-lightning-bolt ',
