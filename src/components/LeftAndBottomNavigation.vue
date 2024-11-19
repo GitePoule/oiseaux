@@ -12,8 +12,14 @@
       </v-bottom-navigation>
     </div>
     <div v-else>
-      <v-navigation-drawer permanent >
-        <v-list nav>
+      <v-navigation-drawer expand-on-hover permanent rail>
+        <v-list dense>
+          <v-list-item
+            prepend-icon="mdi-bird"
+            title="">
+          </v-list-item>
+        </v-list>
+        <v-list nav dense>
           <v-list-item v-for="(item, index) in mainMenuItem"
             :key="index"
             :prepend-icon="item.icon"
@@ -36,14 +42,14 @@
       idxSelMainMenuItem: 0,
       selMainMenuItem: {
           icon: 'mdi-home-group',
-          title: 'Destination Bazoches',
-          value: 'accueil'
+          title: 'Bienvenue',
+          value: 'bienvenue'
       },
       mainMenuItem: [
         {
           icon: 'mdi-home-group',
-          title: 'Destination Bazoches',
-          value: 'accueil',
+          title: 'Bienvenue',
+          value: 'bienvenue',
         },
         {
           icon: 'mdi-home-map-marker',
@@ -52,7 +58,7 @@
         },
         {
           icon: 'mdi-lightning-bolt ',
-          title: 'Découvrir les alentours',
+          title: 'Aux alentours',
           value: 'alentours',
         }
       ],

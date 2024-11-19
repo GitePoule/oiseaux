@@ -1,44 +1,53 @@
-<script setup>
-  import { useTheme } from 'vuetify'
-  const theme = useTheme()
-  function toggleTheme () {
-    theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
-  }
-</script>
+<template>
+  <v-app>
+       
+    <!-- TODO: Passer les items du menus en props-->
+    <LeftAndBottomNavigation />
 
-<template>  
-<v-app>
-    <v-layout>
-      <v-app-bar prominent >
-        <v-app-bar-title>A l'Ombre des Oiseaux</v-app-bar-title>
-        <v-spacer></v-spacer>
-
-        <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
-        <v-btn @click="toggleTheme" icon>
-          <v-icon>mdi-theme-light-dark</v-icon>
-        </v-btn>
-        <v-btn icon>
-          <v-icon>mdi-dots-vertical</v-icon>
-        </v-btn>
-      </v-app-bar>
-
-      <LeftAndBottomNavigation />
+    <component :is="currentAppBarComponent"></component>
 
     <v-main>
       <router-view />
     </v-main>
-  </v-layout>
-</v-app>
+  </v-app>
 </template>
 
 <script>
+  import AccueilAppBar from '@/components/appbars/AccueilAppBar.vue';
+  import GiteAppBar from '@/components/appbars/GiteAppBar.vue';
+  import AlentourAppBar from '@/components/appbars/AlentoursAppBar.vue';
   import LeftAndBottomNavigation from '@/components/LeftAndBottomNavigation.vue';
   export default {
-    data: () => ({}),
+    data: () => ({
+      currentAppBarComponent: AccueilAppBar
+    }),
     components: {
       LeftAndBottomNavigation
+    },
+    watch: {
+      $route(to) {
+        this.updateAppBarComponent(to.name);
+      }
+    },
+    methods: {
+      updateAppBarComponent(routeName) {
+        switch (routeName) {
+          case '':
+            this.currentAppBarComponent = AccueilAppBar;
+            break;
+          case '/Bienvenue':
+            this.currentAppBarComponent = AccueilAppBar;
+            break;
+          case '/Gite': 
+            this.currentAppBarComponent = GiteAppBar;
+            break;
+         case '/Alentours':
+            this.currentAppBarComponent = AlentourAppBar;
+            break;
+          default:
+            this.currentAppBarComponent = AccueilAppBar;
+        }
+      }
     },
   };
 </script>
