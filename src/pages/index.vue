@@ -1,18 +1,19 @@
+<script setup>
+  import { useTheme } from 'vuetify'
+
+  const theme = useTheme()
+
+  function toggleTheme () {
+    theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+  }
+</script>
+
 <template>
   <v-layout>
 
-    <v-app-bar
-      color="teal-darken-4"
-      image="https://picsum.photos/1920/1080?random"
-      prominent
-      >
-        <template v-slot:image>
-          <v-img
-            gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"
-          ></v-img>
-        </template>
+    <v-app-bar prominent >
 
-        <v-app-bar-title>Title</v-app-bar-title>
+        <v-app-bar-title>A l'Ombre des Oiseaux</v-app-bar-title>
 
         <v-spacer></v-spacer>
 
@@ -20,8 +21,8 @@
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
 
-        <v-btn icon>
-          <v-icon>mdi-heart</v-icon>
+        <v-btn @click="toggleTheme" icon>
+          <v-icon>mdi-theme-light-dark</v-icon>
         </v-btn>
 
         <v-btn icon>
@@ -43,11 +44,7 @@
 
         </div>
         <div v-else>
-          <v-navigation-drawer
-            image="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
-            theme="dark"
-            permanent
-          >
+          <v-navigation-drawer permanent >
             <v-list nav>
               <v-list-item v-for="(item, index) in mainMenuItem"
                 :key="index"
@@ -72,31 +69,26 @@
       isMobile: false,
       idxSelMainMenuItem: 0,
       selMainMenuItem: {
-          icon: 'mdi-account-supervisor-circle',
-          title: 'Foo',
-          value: 'foo',
+          icon: 'mdi-home-group',
+          title: 'Destination Bazoches',
+          value: 'home',
       },
       mainMenuItem: [
         {
-          icon: 'mdi-account-supervisor-circle',
-          title: 'Foo',
-          value: 'foo',
+          icon: 'mdi-home-group',
+          title: 'Destination Bazoches',
+          value: 'home',
         },
         {
-          icon: 'mdi-account-supervisor-circle',
-          title: 'Bar',
-          value: 'bar',
+          icon: 'mdi-home-map-marker',
+          title: 'Votre gîte',
+          value: 'gite',
         },
         {
-          icon: 'mdi-account-supervisor-circle',
-          title: 'Fizz',
-          value: 'fizz',
-        },
-        {
-          icon: 'mdi-account-supervisor-circle',
-          title: 'Buzz',
-          value: 'buzz',
-        },
+          icon: 'mdi-lightning-bolt ',
+          title: 'Découvrir les alentours',
+          value: 'alentours',
+        }
       ],
     }),
     mounted() {
