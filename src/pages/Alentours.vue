@@ -1,55 +1,39 @@
 <template>
     <div>
         <v-tabs-window v-model="tab">
-            <v-tabs-window-item
-                v-for="(value, name, index) in this.tabs"
-                :key="name"
-                >
-                    <v-card
-                        class="mx-auto"
-                        max-width="400"
-                        style="margin-top: 20px;margin-bottom: 20px;"
-                    >
-                        <v-img
-                        class="align-end text-white"
-                        height="200"
-                        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                        cover
-                        >
-                        <v-card-title> {{ value }}</v-card-title>
-                        </v-img>
-
-                        <v-card-subtitle class="pt-4">
-                        Number 10
-                        </v-card-subtitle>
-
-                        <v-card-text>
-                        <div>Whitehaven Beach</div>
-
-                        <div>Whitsunday Island, Whitsunday Islands</div>
-                        </v-card-text>
-
-                        <v-card-actions>
-                        <v-btn color="orange" text="Share"></v-btn>
-
-                        <v-btn color="orange" text="Explore"></v-btn>
-                        </v-card-actions>
-                    </v-card>
+            <v-tabs-window-item v-for="(cards, name) in this.tabs" :key="name">
+                <component
+                    v-for="(card, index) in this.shuffle(cards)"
+                    :is="card" :key="name+index"
+                    style="margin: 15px"
+                ></component>
             </v-tabs-window-item>
         </v-tabs-window>
     </div>
 </template>
 
 <script>
+    import Barbizon from '../components/visitbzh/Barbizon.vue'
+    import Blandy from '../components/visitbzh/Blandy.vue'
+    import BzhAsperges from '../components/visitbzh/BzhAsperges.vue';
+    import BleauCastle from '../components/visitbzh/BleauCastle.vue';
+    import BleauEscalade from '../components/visitbzh/BleauEscalade.vue';
+    import Sens from '../components/visitbzh/Sens.vue';
+    import Paris from '../components/visitbzh/Paris.vue';
+    import Auxerre from '../components/visitbzh/Auxerre.vue';
+    import Troyes from '../components/visitbzh/Troyes.vue';
+    import Provins from '../components/visitbzh/Provins.vue';
+
     export default {
-        name: 'Alentours',
+        name: 'Alentours',  
         data: () => ({
             tabs: {
-                "#commerces": 'Boulangerie',
-                "#bazoches": "Illumination de noël de Vimpelles",
-                "#villages": 'Moret sur Loing',
-                "#villes": "Troyes",
-                "#sports": "Promenade le long de l'Yonne"
+                "#commerces": [BzhAsperges],
+                "#bazoches": [],
+                "#musees": [],
+                "#villages": [Barbizon, Blandy],
+                "#villes": [BleauCastle, Sens, Paris, Auxerre, Troyes, Provins],
+                "#sports": [BleauEscalade]
             },
             tab: 0,
         }),  
@@ -63,6 +47,16 @@
             if (this.tab == -1){
                 this.tab = 0
             }
+          },
+          shuffle(a) {
+            var j, x, i;
+            for (i = a.length - 1; i > 0; i--) {
+                j = Math.floor(Math.random() * (i + 1));
+                x = a[i];
+                a[i] = a[j];
+                a[j] = x;
+            }
+            return a;
           }
         },
     };
