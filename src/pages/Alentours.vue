@@ -2,11 +2,10 @@
     <div>
         <v-tabs-window v-model="tab">
             <v-tabs-window-item v-for="(cards, name) in this.tabs" :key="name">
-                <component
-                    v-for="(card, index) in this.shuffle(cards)"
+                <div style="margin: 15px;"><component
+                    v-for="(card, index) in cards"
                     :is="card" :key="name+index"
-                    style="margin: 15px"
-                ></component>
+                ></component></div>
             </v-tabs-window-item>
         </v-tabs-window>
     </div>

@@ -8,9 +8,7 @@
 <template>
     <v-app-bar prominent >
       <v-app-bar-title v-if="!isMobile">A l'Ombre des Oiseaux</v-app-bar-title>
-      <div v-if="isMobile" style="color:teal; margin-left: 20px;">
-        <v-icon icon="mdi-bird"></v-icon>
-      </div>
+      <v-app-bar-title v-if="isMobile"><v-icon icon="mdi-bird" style="color:teal;"></v-icon></v-app-bar-title>
 
       <v-spacer></v-spacer>
 
