@@ -1,5 +1,5 @@
 <template>
-      <div div id="map" style="height: 500px; position: relative;">
+      <div id="map" style="height: 100%; position: relative;">
         <l-map v-model:zoom="zoom" :use-global-leaflet="false" :center="[48.39644, 3.17230]"
           >
           <l-tile-layer
@@ -7,7 +7,7 @@
             layer-type="base" name="OpenStreetMap"
           ></l-tile-layer>
         </l-map>
-        <v-card class="map-button" style="position: absolute; top: 10px; left: 10%; width: 80%;">
+        <v-card class="map-button" style="position: absolute; top: 10px; left: 15%; right: 15%; width: 70%;">
           <v-btn-toggle
             v-model="toggle_multiple"
             background-color="primary"
