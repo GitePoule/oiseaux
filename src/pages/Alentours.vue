@@ -22,18 +22,32 @@
     import Auxerre from '../components/visitbzh/Auxerre.vue';
     import Troyes from '../components/visitbzh/Troyes.vue';
     import Provins from '../components/visitbzh/Provins.vue';
+    import BrayBoulang from '../components/visitbzh/BrayBoulang.vue';
+
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+
+    let tabs = {
+        "#commerces": shuffle([BzhAsperges, BrayBoulang]),
+        "#bazoches": shuffle([]),
+        "#musees": shuffle([]),
+        "#villages": shuffle([Barbizon, Blandy]),
+        "#villes": shuffle([BleauCastle, Sens, Paris, Auxerre, Troyes, Provins]),
+        "#sports": shuffle([BleauEscalade])
+    }
 
     export default {
         name: 'Alentours',  
         data: () => ({
-            tabs: {
-                "#commerces": [BzhAsperges],
-                "#bazoches": [],
-                "#musees": [],
-                "#villages": [Barbizon, Blandy],
-                "#villes": [BleauCastle, Sens, Paris, Auxerre, Troyes, Provins],
-                "#sports": [BleauEscalade]
-            },
+            tabs: tabs,
             tab: 0,
         }),  
         mounted() {
@@ -47,16 +61,6 @@
                 this.tab = 0
             }
           },
-          shuffle(a) {
-            var j, x, i;
-            for (i = a.length - 1; i > 0; i--) {
-                j = Math.floor(Math.random() * (i + 1));
-                x = a[i];
-                a[i] = a[j];
-                a[j] = x;
-            }
-            return a;
-          }
         },
     };
 </script>
