@@ -35,23 +35,22 @@
         return a;
     }
 
-    let tabs = {
-        "#commerces": shuffle([BzhAsperges, BrayBoulang]),
-        "#bazoches": shuffle([]),
-        "#musees": shuffle([]),
-        "#villages": shuffle([Barbizon, Blandy]),
-        "#villes": shuffle([BleauCastle, Sens, Paris, Auxerre, Troyes, Provins]),
-        "#restos": shuffle([]),
-        "#sports": shuffle([BleauEscalade])
-    }
-
     export default {
         name: 'Alentours',  
         data: () => ({
-            tabs: tabs,
+            tabs: null,
             tab: 0,
         }),  
         mounted() {
+        this.tabs = {
+            "#commerces": shuffle([BzhAsperges, BrayBoulang]),
+            "#bazoches": shuffle([]),
+            "#musees": shuffle([]),
+            "#villages": shuffle([Barbizon, Blandy]),
+            "#villes": shuffle([BleauCastle, Sens, Paris, Auxerre, Troyes, Provins]),
+            "#restos": shuffle([]),
+            "#sports": shuffle([BleauEscalade])
+          }
           this.checkHref();
           window.addEventListener('popstate', this.checkHref);
         },
