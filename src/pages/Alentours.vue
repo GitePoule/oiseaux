@@ -41,6 +41,7 @@
         "#musees": shuffle([]),
         "#villages": shuffle([Barbizon, Blandy]),
         "#villes": shuffle([BleauCastle, Sens, Paris, Auxerre, Troyes, Provins]),
+        "#restos": shuffle([]),
         "#sports": shuffle([BleauEscalade])
     }
 

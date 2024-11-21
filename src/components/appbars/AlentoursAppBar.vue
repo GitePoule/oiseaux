@@ -13,27 +13,31 @@
             grow
             show-arrows
             >
-                <v-tab href="#commerces" style="font-size: x-small; color: teal;">
+                <v-tab href="#commerces" style="font-size: small; color: teal;">
                     <v-icon>mdi-baguette</v-icon>
                     Commerces
                 </v-tab>
-                <v-tab href="#bazoches" style="font-size: x-small; color: teal;">
+                <v-tab href="#bazoches" style="font-size: small; color: teal;">
                     <v-icon>mdi-walk</v-icon>
                     Proche de Bazoches
                 </v-tab>
-                <v-tab href="#musees" style="font-size: x-small; color: teal;">
+                <v-tab href="#musees" style="font-size: small; color: teal;">
                     <v-icon>mdi-palette</v-icon>
                     Musées
                 </v-tab>
-                <v-tab href="#villages" style="font-size: x-small; color: teal;">
+                <v-tab href="#villages" style="font-size: small; color: teal;">
                     <v-icon>mdi-map-marker-radius</v-icon>
                     Jolis villages
                 </v-tab>
-                <v-tab href="#villes" style="font-size: x-small; color: teal;">
+                <v-tab href="#villes" style="font-size: small; color: teal;">
                     <v-icon>mdi-castle</v-icon>
                     Villes historiques
                 </v-tab>
-                <v-tab href="#sports" style="font-size: x-small; color: teal;">
+                <v-tab href="#restos" style="font-size: small; color: teal;">
+                    <v-icon>mdi-silverware-fork-knife</v-icon>
+                    Restaurants
+                </v-tab>
+                <v-tab href="#sports" style="font-size: small; color: teal;">
                     <v-icon>mdi-bike</v-icon>
                     Sport
                 </v-tab>
