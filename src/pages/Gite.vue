@@ -48,6 +48,44 @@
 
     <br /><v-divider></v-divider>
     <h3>Les équipements du logement</h3>
+    <v-bottom-sheet inset>
+        <template v-slot:activator="{ props }">
+            <v-btn v-bind="props" text="Liste des équipements"></v-btn>
+        </template>
+
+        <v-card
+            title="Les équipements"
+            style="max-height:50%"
+        >
+            <v-list>
+                <v-list-subheader>Votre gîte contient</v-list-subheader>
+                <v-list-item
+                    v-for="tile in available"
+                    :key="tile.title"
+                    prepend-icon="mdi-bike"
+                    :title="tile.title"
+                ></v-list-item>
+                <v-divider></v-divider>
+                <v-list-subheader>A la demande</v-list-subheader>
+                <v-list-item
+                    v-for="tile in ondemand"
+                    :key="tile.title"
+                    prepend-icon="mdi-bike"
+                    :title="tile.title"
+                ></v-list-item>
+                <v-divider></v-divider>
+                <v-list-subheader>Votre gîte ne contient pas</v-list-subheader>
+                <div class="text-decoration-line-through" style="text-decoration-thickness: 1.5px !important;">
+                    <v-list-item
+                        v-for="tile in unavailable"
+                        :key="tile.title"
+                        prepend-icon="mdi-bike"
+                        :title="tile.title"
+                    ></v-list-item>
+                </div>
+            </v-list>
+        </v-card>
+    </v-bottom-sheet>
 
     <br /><v-divider></v-divider>
     <h3>Petit guide pour le wifi</h3>
@@ -74,6 +112,29 @@
 <script>
     export default {
         name: 'Gite',
+        data: () => ({
+          available: [
+            { img: 'mdi-bike', title: 'Keep' },
+            { img: 'mdi-bike', title: 'Inbox' },
+            { img: 'mdi-bike', title: 'Hangouts' },
+            { img: 'mdi-bike', title: 'Messenger' },
+            { img: 'mdi-bike', title: 'Google+' },
+          ],
+          unavailable: [
+            { img: 'mdi-bike', title: 'Keep' },
+            { img: 'mdi-bike', title: 'Inbox' },
+            { img: 'mdi-bike', title: 'Hangouts' },
+            { img: 'mdi-bike', title: 'Messenger' },
+            { img: 'mdi-bike', title: 'Google+' },
+          ],
+          ondemand: [
+            { img: 'mdi-bike', title: 'Keep' },
+            { img: 'mdi-bike', title: 'Inbox' },
+            { img: 'mdi-bike', title: 'Hangouts' },
+            { img: 'mdi-bike', title: 'Messenger' },
+            { img: 'mdi-bike', title: 'Google+' },
+          ],
+        })
     };
 </script>
 
