@@ -8,39 +8,21 @@
         </v-app-bar-title>
         <template v-slot:extension>
           <v-tabs
+            v-model="tab"
             align-tabs="center"
             stacked
             grow
             show-arrows
             >
-                <v-tab href="#commerces" style="font-size: small; color: teal;">
-                    <v-icon>mdi-baguette</v-icon>
-                    Commerces
-                </v-tab>
-                <v-tab href="#bazoches" style="font-size: small; color: teal;">
-                    <v-icon>mdi-walk</v-icon>
-                    Proche de Bazoches
-                </v-tab>
-                <v-tab href="#musees" style="font-size: small; color: teal;">
-                    <v-icon>mdi-palette</v-icon>
-                    Musées
-                </v-tab>
-                <v-tab href="#villages" style="font-size: small; color: teal;">
-                    <v-icon>mdi-map-marker-radius</v-icon>
-                    Jolis villages
-                </v-tab>
-                <v-tab href="#villes" style="font-size: small; color: teal;">
-                    <v-icon>mdi-castle</v-icon>
-                    Villes historiques
-                </v-tab>
-                <v-tab href="#restos" style="font-size: small; color: teal;">
-                    <v-icon>mdi-silverware-fork-knife</v-icon>
-                    Restaurants
-                </v-tab>
-                <v-tab href="#sports" style="font-size: small; color: teal;">
-                    <v-icon>mdi-bike</v-icon>
-                    Sport
-                </v-tab>
+            <v-tab
+                v-for="(tab, index) in tabs"
+                :key="index"
+                :href="tab.href"
+                style="font-size: small; color: teal;"
+              >
+                <v-icon>{{ tab.icon }}</v-icon>
+                {{ tab.label }}
+              </v-tab>
             </v-tabs>
         </template>
     </v-app-bar>
@@ -50,10 +32,20 @@
   export default {
     name: 'AlentoursAppBar',
     data: () => ({
+        tabs: [
+          { href: '#commerces', icon: 'mdi-baguette', label: 'Commerces' },
+          { href: '#bazoches', icon: 'mdi-walk', label: 'Proche de Bazoches' },
+          { href: '#musees', icon: 'mdi-palette', label: 'Musées' },
+          { href: '#villages', icon: 'mdi-map-marker-radius', label: 'Jolis villages' },
+          { href: '#villes', icon: 'mdi-castle', label: 'Villes historiques' },
+          { href: '#restos', icon: 'mdi-silverware-fork-knife', label: 'Restaurants' },
+          { href: '#sports', icon: 'mdi-bike', label: 'Sport' }
+        ],
         tab: null,
         isMobile: false,
     }),
     mounted() {
+      this.tab = this.tabs.findIndex(tab => tab.href === window.location.hash);
       this.checkScreenSize();
       window.addEventListener('resize', this.checkScreenSize);
     },
