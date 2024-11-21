@@ -48,15 +48,22 @@
 
     <br /><v-divider></v-divider>
     <h3>Les équipements du logement</h3>
-    <v-bottom-sheet inset>
-        <template v-slot:activator="{ props }">
-            <v-btn v-bind="props" text="Liste des équipements"></v-btn>
-        </template>
-
-        <v-card
-            title="Les équipements"
-            style="max-height:50%"
+        <v-btn
+        size="x-large"
+        text="Click Me"
+        @click="sheet = !sheet"
+        ></v-btn>
+        <v-bottom-sheet inset v-model="sheet"><v-card
+            title="Les équipements" 
         >
+            <v-card-text>
+                <v-btn
+                    variant="text"
+                    @click="sheet = !sheet"
+                >
+                    Fermer la liste
+                </v-btn>
+            </v-card-text>
             <v-list>
                 <v-list-subheader>Votre gîte contient</v-list-subheader>
                 <v-list-item
@@ -84,8 +91,7 @@
                     ></v-list-item>
                 </div>
             </v-list>
-        </v-card>
-    </v-bottom-sheet>
+        </v-card></v-bottom-sheet>
 
     <br /><v-divider></v-divider>
     <h3>Petit guide pour le wifi</h3>
@@ -113,6 +119,7 @@
     export default {
         name: 'Gite',
         data: () => ({
+          sheet: false,
           available: [
             { img: 'mdi-bike', title: 'Keep' },
             { img: 'mdi-bike', title: 'Inbox' },
