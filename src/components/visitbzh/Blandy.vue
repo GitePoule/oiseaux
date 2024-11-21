@@ -8,7 +8,7 @@
         <v-img
         class="align-end text-white"
         height="200"
-        src="@/assets/blandy.jpg"
+        src="@/assets/img/blandy.jpg"
         cover
         >
         <v-card-title> Blandy les Tours </v-card-title>

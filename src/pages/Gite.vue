@@ -53,44 +53,34 @@
         text="Click Me"
         @click="sheet = !sheet"
         ></v-btn>
-        <v-bottom-sheet inset v-model="sheet"><v-card
-            title="Les équipements" 
-        >
+        <v-bottom-sheet inset v-model="sheet"><v-card>
             <v-card-text>
-                <v-btn
-                    variant="text"
-                    @click="sheet = !sheet"
-                >
-                    Fermer la liste
-                </v-btn>
+                <v-row align="center" justify="center">
+                    <v-btn
+                        variant="text"
+                        @click="sheet = !sheet"
+                    >
+                        Fermer la liste
+                    </v-btn>
+                </v-row>
             </v-card-text>
+
             <v-list>
-                <v-list-subheader>Votre gîte contient</v-list-subheader>
-                <v-list-item
-                    v-for="tile in available"
-                    :key="tile.title"
-                    prepend-icon="mdi-bike"
-                    :title="tile.title"
-                ></v-list-item>
-                <v-divider></v-divider>
-                <v-list-subheader>A la demande</v-list-subheader>
-                <v-list-item
-                    v-for="tile in ondemand"
-                    :key="tile.title"
-                    prepend-icon="mdi-bike"
-                    :title="tile.title"
-                ></v-list-item>
-                <v-divider></v-divider>
-                <v-list-subheader>Votre gîte ne contient pas</v-list-subheader>
-                <div class="text-decoration-line-through" style="text-decoration-thickness: 1.5px !important;">
+                <div v-for="(e, l, i) in equipements" :key="e">
+                    <v-divider v-if="i != 0"></v-divider>
+                    <v-list-subheader>{{ e.label }}</v-list-subheader>
                     <v-list-item
-                        v-for="tile in unavailable"
-                        :key="tile.title"
-                        prepend-icon="mdi-bike"
-                        :title="tile.title"
+                        v-for="item in e.items"
+                        :class="{ 'text-decoration-line-through': !item.available }"
+                        :key="item.id"
+                        :prepend-icon="item.icon"
+                        :title="item.name"
+                        :append-icon="item.ask ? 'mdi-chat-question' : ''"
                     ></v-list-item>
+                    <br />
                 </div>
             </v-list>
+
         </v-card></v-bottom-sheet>
 
     <br /><v-divider></v-divider>
@@ -116,35 +106,18 @@
 </template>
 
 <script>
+    import equipements from '@/assets/equipments';
     export default {
         name: 'Gite',
         data: () => ({
-          sheet: false,
-          available: [
-            { img: 'mdi-bike', title: 'Keep' },
-            { img: 'mdi-bike', title: 'Inbox' },
-            { img: 'mdi-bike', title: 'Hangouts' },
-            { img: 'mdi-bike', title: 'Messenger' },
-            { img: 'mdi-bike', title: 'Google+' },
-          ],
-          unavailable: [
-            { img: 'mdi-bike', title: 'Keep' },
-            { img: 'mdi-bike', title: 'Inbox' },
-            { img: 'mdi-bike', title: 'Hangouts' },
-            { img: 'mdi-bike', title: 'Messenger' },
-            { img: 'mdi-bike', title: 'Google+' },
-          ],
-          ondemand: [
-            { img: 'mdi-bike', title: 'Keep' },
-            { img: 'mdi-bike', title: 'Inbox' },
-            { img: 'mdi-bike', title: 'Hangouts' },
-            { img: 'mdi-bike', title: 'Messenger' },
-            { img: 'mdi-bike', title: 'Google+' },
-          ],
+          sheet: true,
+          equipements: equipements
         })
     };
 </script>
 
 <style scoped>
-/* Ajoutez vos styles ici */
+.text-decoration-line-through{
+    text-decoration-thickness: 1.5px !important;
+}
 </style>
