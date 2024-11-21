@@ -13,7 +13,12 @@
             background-color="primary"
             dark
             multiple
+            style="overflow-x:auto; white-space: nowrap;"
           >
+            <v-btn prepend-icon="mdi-castle">Châteaux</v-btn>
+            <v-btn>
+              <v-icon>mdi-format-italic</v-icon>
+            </v-btn>
             <v-btn prepend-icon="mdi-castle">Châteaux</v-btn>
             <v-btn>
               <v-icon>mdi-format-italic</v-icon>
