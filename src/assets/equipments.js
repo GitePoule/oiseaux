@@ -51,7 +51,9 @@ const equipements = {
         { name: "Cafetière (café moulu)", icon: "mdi-coffee-maker", available: true, ask: false },
         { name: "Grille pain", icon: "mdi-toaster", available: true, ask: false },
         { name: "Réfrigérateur", icon: "mdi-fridge", available: true, ask: false },
-        { name: "Plaque de cuisson", icon: "mdi-stove", available: true, ask: false }
+        { name: "Plaque de cuisson", icon: "mdi-stove", available: true, ask: false },
+        { name: "Appareil à raclette", icon: "mdi-cheese", available: true, ask: true },
+        { name: "Appareil à mini crêpes", icon: "mdi-sugar", available: true, ask: true }
       ]
     },
     divertissementEtCommunication: {
