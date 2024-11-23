@@ -7,17 +7,11 @@
             height="100%"
             width="100%"
         >  
+        <div >
+            </div>
             <v-carousel-item
-                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                cover
-            ></v-carousel-item>
-            <v-carousel-item
-                src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg"
-                cover
-            ></v-carousel-item>
-            <v-carousel-item
-                src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                cover
+                v-for="(image, index) in imgCarousel" :key="index"
+                :src="image" :alt="'Image ' + index" cover
             ></v-carousel-item>
       </v-carousel>
     </v-card>
@@ -232,10 +226,12 @@
 
 <script>
     import equipements from '@/assets/equipments';
+    import images from '@/assets/img/gites';
     export default {
         name: 'Gite',
         data: () => ({
           tabGuide: 1,
+          imgCarousel: images,
           sheetEquipmt: false,
           sheetGuide: false,
           equipements: equipements
