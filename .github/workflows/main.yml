@@ -31,6 +31,6 @@ jobs:
         username: ${{ secrets.SFTP_USERNAME }}
         password: ${{ secrets.SFTP_PASSWORD }}
         local-dir: dist/
-        server-dir: /path/to/remote/directory/  # Remplacez par le chemin du répertoire distant
+        server-dir: /gites-bazoches/ombre-oiseau/
         port: 22  # Port SFTP, généralement 22
         protocol: sftp
