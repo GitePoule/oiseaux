@@ -32,5 +32,5 @@ jobs:
         password: ${{ secrets.SFTP_PASSWORD }}
         local-dir: dist/
         server-dir: /gites-bazoches/ombre-oiseau/
-        port: 22 
+        port: 21 
         protocol: ftp
