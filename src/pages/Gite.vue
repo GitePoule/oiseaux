@@ -56,10 +56,10 @@
       </v-col>
     </v-row>
     
-    <br/><br/>
-
     <br /><v-divider></v-divider>
     <h3>Rez-de-chausée</h3>
+    
+    <br/>
 
     <v-card
         class="mx-auto"
@@ -108,6 +108,8 @@
     <br /><v-divider></v-divider>
     <h3>L'étage</h3>
 
+    <br/>
+
     <v-card
         class="mx-auto"
         prepend-icon="mdi-bed-king"
@@ -141,7 +143,7 @@
         </template>
     </v-card>
 
-    <br /><v-divider></v-divider>
+    <br/><br /><v-divider></v-divider>
     <h3>Les équipements du logement</h3><br />
 
         <v-chip v-for="(e) in equipements" :key="e.label"  style="margin: 5px;" size="small">
