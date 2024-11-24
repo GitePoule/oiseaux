@@ -15,36 +15,48 @@
             ></v-carousel-item>
       </v-carousel>
     </v-card>
-  <div style="margin: 10px;">
+  <div style="margin-left: 10%; margin-right: 10%;">
 
     <br />
-    <h3>A l'ombre des oiseaux</h3>
-    <br />
-    <p>Maison - Bazoches-Lès-Bray (77118)</p>
-    <p>1 lit double - 2 lits simples</p>
-    <p style="font-size: 9pt;">Note Gîtes de France : 5/5 (Déc. 2024) </p>
-    <p style="font-size: 9pt;">Classement Gîtes de France : 3 épis  </p>
-    <br />
 
-    <v-avatar color="green-darken-2" size="small" style="margin-right: 5px;">
-      <v-icon icon="mdi-barley"></v-icon>
-    </v-avatar>
-    <v-avatar color="green-darken-2" size="small" style="margin-right: 5px;">
-      <v-icon icon="mdi-barley"></v-icon>
-    </v-avatar>
-    <v-avatar color="green-darken-2" size="small" style="margin-right: 5px;">
-      <v-icon icon="mdi-barley"></v-icon>
-    </v-avatar>
-
-    <v-chip
-      class="ma-2"
-      color="indigo"
-      href="https://www.gites-de-france.com/fr/ile-de-france/seine-et-marne/lombre-des-oiseaux-77g624#reviews"
-      prepend-icon="mdi-star"
-    >
-    Avis et commentaires
-    </v-chip>
-    <br />
+    <v-row no-gutters>
+      <v-col
+        cols="12"
+        sm="6"
+      >
+        <h3>A l'ombre des oiseaux</h3>
+        <br />
+        <p>Maison - Bazoches-Lès-Bray (77118)</p>
+        <p>1 lit double - 2 lits simples</p>
+        <p style="font-size: 9pt;">Note Gîtes de France : 5/5 (Déc. 2024) </p>
+        <p style="font-size: 9pt;">Classement Gîtes de France : 3 épis  </p>
+      </v-col>
+      <v-col
+        cols="12"
+        sm="6"
+        class="d-flex align-center mb-6"
+      >
+        <v-avatar color="green-darken-2" size="small" style="margin-right: 5px;">
+        <v-icon icon="mdi-barley"></v-icon>
+        </v-avatar>
+        <v-avatar color="green-darken-2" size="small" style="margin-right: 5px;">
+        <v-icon icon="mdi-barley"></v-icon>
+        </v-avatar>
+        <v-avatar color="green-darken-2" size="small" style="margin-right: 5px;">
+        <v-icon icon="mdi-barley"></v-icon>
+        </v-avatar>
+        <v-chip
+        class="ma-2"
+        color="indigo"
+        href="https://www.gites-de-france.com/fr/ile-de-france/seine-et-marne/lombre-des-oiseaux-77g624#reviews"
+        prepend-icon="mdi-star"
+        >
+        Avis et commentaires
+        </v-chip>
+      </v-col>
+    </v-row>
+    
+    <br/><br/>
 
     <br /><v-divider></v-divider>
     <h3>Rez-de-chausée</h3>
@@ -173,7 +185,7 @@
 
         </v-card></v-bottom-sheet>
 
-    <br/><br/><br/><v-divider></v-divider>
+    <br/><br/><v-divider></v-divider>
     <h3>Petits guides d'utilisation</h3><br/>
 
     <v-chip v-for="(e) in ['Four', 'Télévision', 'Wifi']" :key="e.label"  style="margin: 5px;" size="small">
@@ -205,14 +217,46 @@
             <v-tabs-window-item :value="2" height="600px">Guide 2</v-tabs-window-item>
             <v-tabs-window-item :value="3" height="600px">Guide 3</v-tabs-window-item>
         </v-tabs-window>
-
+        
     </v-card></v-bottom-sheet>
 
     <br /><br /><v-divider></v-divider>
     <h3>Jeux de société</h3><br />
-    <p>Les jeux de société sont disponibles à la demande.</p>
 
-    <br /><v-divider></v-divider>
+    <v-chip v-for="(e) in games" :key="e.label" :color="e.color" style="margin: 5px;" variant="flat" size="small">
+        {{ e.name }}
+    </v-chip>
+    <v-chip
+        @click="sheetGame = !sheetGame"
+        size="small"
+        variant="elevated"
+        prepend-icon="mdi-cards-playing"
+    >
+        Voir tous les jeux
+    </v-chip>
+
+    <v-bottom-sheet inset v-model="sheetGame"><v-card>
+        <v-card-text>
+            <v-row align="center" justify="center">
+                <v-btn
+                    variant="text"
+                    @click="sheetGame = !sheetGame"
+                >
+                    Fermer la liste
+                </v-btn>
+            </v-row>
+        </v-card-text>
+        <v-list>
+            <v-list-item
+                v-for="e in games"
+                :key="e.name"
+                :prepend-avatar="e.logo"
+                :title="e.name"
+            ></v-list-item>
+        </v-list>
+    </v-card></v-bottom-sheet>
+    
+    <br /><br /><v-divider></v-divider>
     <h3>Jardin extérieur</h3><br />
 
     <br /><v-divider></v-divider>
@@ -226,14 +270,18 @@
 
 <script>
     import equipements from '@/assets/equipments';
+    import games from '@/assets/games';
     import images from '@/assets/img/gites';
+
     export default {
         name: 'Gite',
         data: () => ({
           tabGuide: 1,
           imgCarousel: images,
+          games: games,
           sheetEquipmt: false,
           sheetGuide: false,
+          sheetGame: false,
           equipements: equipements
         })
     };

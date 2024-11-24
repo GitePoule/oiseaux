@@ -92,4 +92,4 @@ const equipements = {
     }
   };
   
-  export default equipements;
+export default equipements;
