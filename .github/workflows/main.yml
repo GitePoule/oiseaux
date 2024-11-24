@@ -1,0 +1,36 @@
+name: Deploy Vue.js App
+
+on:
+  push:
+    branches:
+      - main  # Remplacez par la branche que vous souhaitez surveiller
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '23.1.0'  # Remplacez par la version de Node.js que vous utilisez
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build Vue.js app
+      run: npm run build
+
+    - name: Upload to SFTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ${{ secrets.SFTP_SERVER }}
+        username: ${{ secrets.SFTP_USERNAME }}
+        password: ${{ secrets.SFTP_PASSWORD }}
+        local-dir: dist/
+        server-dir: /path/to/remote/directory/  # Remplacez par le chemin du répertoire distant
+        port: 22  # Port SFTP, généralement 22
+        protocol: sftp
