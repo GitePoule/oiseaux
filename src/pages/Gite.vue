@@ -3,9 +3,10 @@
         <v-carousel
             cycle
             :show-arrows="false"
-            progress="teal"
+            progress="blue"
             height="100%"
             width="100%"
+            hide-delimiter-background
         >  
         <div >
             </div>
