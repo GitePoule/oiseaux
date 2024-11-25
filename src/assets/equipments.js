@@ -25,7 +25,7 @@ const equipements = {
       label: "Chambre",
       items: [
         { name: "Draps", icon: "mdi-bed", available: true, ask: false },
-        { name: "Lit pour bébé", icon: "mdi-cradle", available: false, ask: false }
+        { name: "Lit pour bébé", icon: "mdi-cradle", available: true, ask: true }
       ]
     },
     securiteEtConfort: {
@@ -69,7 +69,7 @@ const equipements = {
       id: "enfants",
       label: "Enfants",
       items: [
-        { name: "Chaise haute", icon: "mdi-chair-school", available: true, ask: false },
+        { name: "Chaise haute", icon: "mdi-chair-school", available: true, ask: true },
         { name: "Livres et jouets pour enfants", icon: "mdi-book-open-page-variant", available: true, ask: true }
       ]
     },
