@@ -191,7 +191,7 @@
                            activator="parent"
                            location="end"
                        >
-                          Sur demande
+                          Demandez-nous!
                        </v-tooltip>
                     </v-list-item>
                     <br />
