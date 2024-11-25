@@ -185,7 +185,12 @@
                         :prepend-icon="item.icon"
                         :title="item.name"
                         :append-icon="item.ask ? 'mdi-chat-question' : ''"
-                    ></v-list-item>
+                    >
+      <v-tooltip
+        activator="parent"
+        location="start"
+      >Sur demande</v-tooltip>
+                    </v-list-item>
                     <br />
                 </div>
             </v-list>
