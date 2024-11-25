@@ -32,6 +32,7 @@
         <p style="font-size: 9pt;">Surface de 70m² </p>
         <p style="font-size: 9pt;">Note Gîtes de France : 5/5 (Déc. 2024) </p>
         <p style="font-size: 9pt;">Classement Gîtes de France : 3 épis  </p>
+        <br />
       </v-col>
       <v-col
         cols="12"
