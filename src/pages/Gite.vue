@@ -186,10 +186,13 @@
                         :title="item.name"
                         :append-icon="item.ask ? 'mdi-chat-question' : ''"
                     >
-      <v-tooltip
-        activator="parent"
-        location="start"
-      >Sur demande</v-tooltip>
+                       <v-tooltip
+                           v-if="item.ask"
+                           activator="parent"
+                           location="end"
+                       >
+                          Sur demande
+                       </v-tooltip>
                     </v-list-item>
                     <br />
                 </div>
