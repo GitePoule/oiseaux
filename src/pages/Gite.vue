@@ -36,6 +36,7 @@
         sm="6"
         class="d-flex align-center mb-6"
       >
+        <br/>
         <v-avatar color="green-darken-2" size="small" style="margin-right: 5px;">
         <v-icon icon="mdi-barley"></v-icon>
         </v-avatar>
@@ -53,7 +54,6 @@
         >
         Avis et commentaires
         </v-chip>
-        <br/>
       </v-col>
     </v-row>
     
@@ -65,7 +65,7 @@
     <v-card
         class="mx-auto"
         prepend-icon="mdi-chef-hat"
-        subtitle=""
+        subtitle="Équipée"
         width="200"
     >
         <template v-slot:title>
