@@ -53,6 +53,7 @@
         >
         Avis et commentaires
         </v-chip>
+        <br/>
       </v-col>
     </v-row>
     
