@@ -153,7 +153,8 @@
             @click="sheetEquipmt = !sheetEquipmt"
             size="small"
             variant="elevated"
-            prepend-icon="mdi-format-list-bulleted"
+            style="margin: 5px;"
+ prepend-icon="mdi-format-list-bulleted"
         >
             Voir les équipements
         </v-chip>
@@ -198,6 +199,7 @@
         size="small"
         variant="elevated"
         prepend-icon="mdi-help-box"
+        style="margin: 5px;"
     >
         Ouvrir les guides
     </v-chip>
@@ -233,6 +235,7 @@
         size="small"
         variant="elevated"
         prepend-icon="mdi-cards-playing"
+        style="margin: 5px;"
     >
         Voir tous les jeux
     </v-chip>
