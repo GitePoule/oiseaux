@@ -276,6 +276,39 @@
     <br /><br /><v-divider></v-divider>
     <h3>Jardin extérieur</h3><br />
 
+    <v-card
+        class="mx-auto"
+        prepend-icon="mdi-grill"
+        subtitle="Orienté au sud-est"
+        width="200"
+    >
+        <template v-slot:title>
+        <span class="font-weight-black">Terrasse extérieure</span>
+        </template>
+    </v-card><br/>
+
+    <v-card
+        class="mx-auto"
+        prepend-icon="mdi-grill"
+        subtitle="Plancha"
+        width="200"
+    >
+        <template v-slot:title>
+        <span class="font-weight-black">Barbecue</span>
+        </template>
+    </v-card><br/>
+
+    <v-card
+        class="mx-auto"
+        prepend-icon="mdi-emoticon-cool"
+        subtitle="Crème solaire non fournie"
+        width="200"
+    >
+        <template v-slot:title>
+        <span class="font-weight-black">Chaises longues</span>
+        </template>
+    </v-card><br/>
+
     <br /><v-divider></v-divider>
     <h3>Règlement intérieur</h3><br />
 
