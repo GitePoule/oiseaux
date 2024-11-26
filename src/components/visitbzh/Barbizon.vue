@@ -22,9 +22,9 @@
         <div>Barbizon, charmant village près de Fontainebleau, est célèbre pour avoir inspiré les peintres de l'École de Barbizon au XIXe siècle. Ses ruelles pittoresques et ses maisons en pierre préservent un cadre authentique et bucolique, attirant artistes et visiteurs en quête de tranquillité et d'inspiration.</div>
         </v-card-text>
 
-        <!--<v-card-actions>
-        <v-btn color="orange" text="Voir le site" href="https://champ-ramard.fr"></v-btn>
-        </v-card-actions>-->
+        <v-card-actions>
+        <v-btn color="primary" text="Voir le site" href="https://www.barbizon.fr/"></v-btn>
+        </v-card-actions>
     </v-card>
 
 </template>
