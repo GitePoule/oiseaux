@@ -1,6 +1,6 @@
 <template>
       <div id="map" style="height: 100%; position: relative;">
-        <l-map v-model:zoom="zoom" :use-global-leaflet="false" :center="[48.39644, 3.17230]"
+        <l-map v-model:zoom="zoom" :options="{zoomControl: false}" :use-global-leaflet="false" :center="[48.39644, 3.17230]"
           >
           <l-tile-layer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -18,11 +18,9 @@
             </l-marker>
           </div>
         </l-map>
-        <v-card class="map-button" style="position: absolute; top: 10px; left: 15%; right: 15%; width: 70%;">
+        <v-card class="map-button" style="position: absolute; top: 10px; left: 10%; right: 10%; width: 80%;">
           <v-btn-toggle
             v-model="toggle_multiple"
-            background-color="primary"
-            dark
             multiple
             style="overflow-x:auto; white-space: nowrap;"
           >
