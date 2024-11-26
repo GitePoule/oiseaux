@@ -69,7 +69,7 @@
         class="mx-auto"
         prepend-icon="mdi-chef-hat"
         subtitle="Équipée"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Cuisine</span>
@@ -80,7 +80,7 @@
         class="mx-auto"
         prepend-icon="mdi-television"
         subtitle="Android TV"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Salon</span>
@@ -91,7 +91,7 @@
         class="mx-auto"
         prepend-icon="mdi-shower"
         subtitle="Douche"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Salle de bain</span>
@@ -102,7 +102,7 @@
         class="mx-auto"
         prepend-icon="mdi-toilet"
         subtitle="Papier toilette inclus"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Toilettes 1</span>
@@ -118,7 +118,7 @@
         class="mx-auto"
         prepend-icon="mdi-bed-king"
         subtitle="1 lit double"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Chambre 1</span>
@@ -129,7 +129,7 @@
         class="mx-auto"
         prepend-icon="mdi-bed"
         subtitle="2 lits simples"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Chambre 2</span>
@@ -140,7 +140,7 @@
         class="mx-auto"
         prepend-icon="mdi-toilet"
         subtitle="Papier toilette inclus"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Toilettes 2</span>
@@ -280,7 +280,7 @@
         class="mx-auto"
         prepend-icon="mdi-grill"
         subtitle="Orienté au sud-est"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Terrasse extérieure</span>
@@ -291,7 +291,7 @@
         class="mx-auto"
         prepend-icon="mdi-grill"
         subtitle="Plancha"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Barbecue</span>
@@ -302,7 +302,7 @@
         class="mx-auto"
         prepend-icon="mdi-emoticon-cool"
         subtitle="Crème solaire non fournie"
-        width="200"
+        width="250"
     >
         <template v-slot:title>
         <span class="font-weight-black">Chaises longues</span>
