@@ -22,9 +22,9 @@
         <div>Le Château de Blandy-les-Tours est une forteresse médiévale impressionnante avec ses tours imposantes et ses douves. Restauré avec soin, il offre un aperçu fascinant de l'architecture défensive du Moyen Âge et accueille régulièrement des expositions et des événements culturels.</div>
         </v-card-text>
 
-        <!--<v-card-actions>
-        <v-btn color="orange" text="Voir le site" href="https://champ-ramard.fr"></v-btn>
-        </v-card-actions>-->
+        <v-card-actions>
+        <v-btn color="primary" text="Voir le site" href="https://www.chateau-blandy.fr/fr"></v-btn>
+        </v-card-actions>
     </v-card>
 
 </template>
