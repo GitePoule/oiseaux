@@ -7,7 +7,7 @@
             layer-type="base" name="OpenStreetMap"
           ></l-tile-layer>
           <l-marker :lat-lng="[48.39759, 3.18890]" >
-            <l-icon :icon-url="logoG2F" :icon-size="[25, 25]"></l-icon>
+            <l-icon :icon-url="logoG2F" :icon-size="[30, 30]"></l-icon>
           </l-marker>
           <div v-for="marker in markers" :key="marker.id">
             <l-marker :lat-lng="marker.coord" v-if="filters.includes(marker.categ)" >
