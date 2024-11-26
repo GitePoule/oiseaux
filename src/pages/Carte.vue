@@ -6,10 +6,13 @@
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             layer-type="base" name="OpenStreetMap"
           ></l-tile-layer>
-          <l-marker :lat-lng="[48.39759, 3.18890]" ></l-marker>
+          <l-marker :lat-lng="[48.39759, 3.18890]" >
+            <l-icon :icon-url="logoG2F" :icon-size="[25, 25]"></l-icon>
+          </l-marker>
           <div v-for="marker in markers" :key="marker.id">
             <l-marker :lat-lng="marker.coord" v-if="toggle_multiple.includes(marker.categ)" >
               <l-icon
+                  
                   icon-url="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png">
               </l-icon>
             </l-marker>
@@ -23,24 +26,29 @@
             multiple
             style="overflow-x:auto; white-space: nowrap;"
           >
-
-            <v-btn prepend-icon="mdi-bowling" value="activity">
-              Activités
+            <v-btn value="activity">
+              <v-icon style="margin-right: 5px;">mdi-bowling</v-icon>
+              <span v-if="!isMobile">Activités</span>
             </v-btn>
-            <v-btn prepend-icon="mdi-castle" value="chateaux">
-              Châteaux
+            <v-btn value="chateaux">
+              <v-icon style="margin-right: 5px;">mdi-castle</v-icon>
+              <span v-if="!isMobile">Châteaux</span>
             </v-btn>
-            <v-btn prepend-icon="mdi-cart-outline" value="commerces">
-              Commerces
+            <v-btn value="commerces">
+              <v-icon style="margin-right: 5px;">mdi-cart-outline</v-icon>
+              <span v-if="!isMobile">Commerces</span>
             </v-btn>
-            <v-btn prepend-icon="mdi-walk" value="randonnees">
-              Randonnées
+            <v-btn value="randonnees">
+              <v-icon style="margin-right: 5px;">mdi-walk</v-icon>
+              <span v-if="!isMobile">Randonnées</span>
             </v-btn>
-            <v-btn prepend-icon="mdi-silverware-fork-knife" value="restos">
-              Restaurants
+            <v-btn value="restos">
+              <v-icon style="margin-right: 5px;">mdi-silverware-fork-knife</v-icon>
+              <span v-if="!isMobile">Restaurants</span>
             </v-btn>
-            <v-btn prepend-icon="mdi-train" value="transports">
-              Transports
+            <v-btn value="transports">
+              <v-icon style="margin-right: 5px;">mdi-train</v-icon>
+              <span v-if="!isMobile">Transports</span>
             </v-btn>
 
           </v-btn-toggle>
@@ -51,6 +59,8 @@
 <script>
     import "leaflet/dist/leaflet.css";
     import { LMap, LTileLayer, LMarker, LIcon } from "@vue-leaflet/vue-leaflet";
+    import logoG2F from "@/assets/img/gites-de-france.png";
+
     export default {
         name: 'Carte',
         components: {
@@ -60,7 +70,9 @@
             LIcon,
         },
         data: () => ({
+            logoG2F:logoG2F,
             zoom: 12,
+            isMobile: false,
             toggle_multiple: [],
             markers: [
                   {
@@ -76,7 +88,17 @@
                     "coord": [48.39759, 3.18990],
                   },
             ],
-        })
+            hiddenMarkers: {}
+        }),
+        mounted() {
+          this.checkScreenSize();
+          window.addEventListener('resize', this.checkScreenSize);
+        },
+        methods: {
+          checkScreenSize() {
+            this.isMobile = window.innerWidth <= 768;
+          }
+        },
 };
 </script>
 
