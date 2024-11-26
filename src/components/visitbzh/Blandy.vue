@@ -24,6 +24,7 @@
 
         <v-card-actions>
         <v-btn color="primary" text="Voir le site" href="https://www.chateau-blandy.fr/fr"></v-btn>
+        <v-btn color="primary" text="Billetterie" href="https://billetterie.chateau-blandy.fr/fr-FR/accueil"></v-btn>
         </v-card-actions>
     </v-card>
 
