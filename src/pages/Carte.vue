@@ -10,17 +10,14 @@
             <l-icon :icon-url="logoG2F" :icon-size="[25, 25]"></l-icon>
           </l-marker>
           <div v-for="marker in markers" :key="marker.id">
-            <l-marker :lat-lng="marker.coord" v-if="toggle_multiple.includes(marker.categ)" >
-              <l-icon
-                  
-                  icon-url="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png">
-              </l-icon>
+            <l-marker :lat-lng="marker.coord" v-if="filters.includes(marker.categ)" >
+              <l-icon :icon-url="marker.img" :icon-size="marker.imgSize"></l-icon>
             </l-marker>
           </div>
         </l-map>
         <v-card class="map-button" style="position: absolute; top: 10px; left: 10%; right: 10%; width: 80%;">
           <v-btn-toggle
-            v-model="toggle_multiple"
+            v-model="filters"
             multiple
             style="overflow-x:auto; white-space: nowrap;"
           >
@@ -71,18 +68,22 @@
             logoG2F:logoG2F,
             zoom: 12,
             isMobile: false,
-            toggle_multiple: [],
+            filters: [],
             markers: [
                   {
                     "id": "essai",
                     "categ": "activity",
                     "name": "Essai",
+                    "img": "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
+                    "imgSize": [25, 25],
                     "coord": [48.1759, 3.18890],
                   },
                   {
                     "id": "essai2",
                     "categ": "activity",
                     "name": "Essai",
+                    "imgSize": [25, 25],
+                    "img": "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
                     "coord": [48.39759, 3.18990],
                   },
             ],
