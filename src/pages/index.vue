@@ -3,7 +3,7 @@
 
   <v-parallax :src="welcomeImg"></v-parallax>
 
-  <v-timeline side="end">
+  <v-timeline side="end" style"padding: 5px;">
 
     <v-timeline-item dot-color="primary" icon="mdi-calendar">
       <v-card class="elevation-2">
