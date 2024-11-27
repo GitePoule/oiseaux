@@ -328,7 +328,8 @@
     import equipements from '@/assets/equipments';
     import games from '@/assets/games';
     import images from '@/assets/img/gites';
-    let imgTravaux = [];
+    import imagesTravaux from '@/assets/img/travaux';
+
     export default {
         name: 'Gite',
         data: () => ({
