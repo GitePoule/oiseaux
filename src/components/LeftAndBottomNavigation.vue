@@ -62,7 +62,7 @@
           value: 'carte',
         },
         {
-          icon: 'mdi-lightning-bolt ',
+          icon: 'mdi-lightning-bolt',
           title: 'Aux alentours',
           value: 'alentours',
         }

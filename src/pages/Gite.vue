@@ -1,15 +1,11 @@
 <template>
-    <v-card style="border-radius:0px;height:500px;max-height:20%;width:100%;">
+    <v-card style="border-radius:0px;height:300px;">
         <v-carousel
-            cycle
-            :show-arrows="false"
-            progress="blue"
+            progress="primary"
             height="100%"
             width="100%"
-            hide-delimiter-background
+            hide-delimiters
         >  
-        <div >
-            </div>
             <v-carousel-item
                 v-for="(image, index) in imgCarousel" :key="index"
                 :src="image" :alt="'Image ' + index" cover

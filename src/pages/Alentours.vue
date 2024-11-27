@@ -6,6 +6,16 @@
                     v-for="(card, index) in cards"
                     :is="card" :key="name+index"
                 ></component></div>
+                <v-empty-state
+                    v-if="cards.length == 0"
+                    headline="Aucun endroit trouvé"
+                    title="Pourtant il y a de quoi faire..."
+                    text="Il reste du travail à faire sur cette page !"
+                    >
+                    <template v-slot:media>
+                        <v-icon>mdi-bird</v-icon>
+                    </template>
+                </v-empty-state>
             </v-tabs-window-item>
         </v-tabs-window>
     </div>
