@@ -344,7 +344,7 @@
         }),
         methods: {
            switchTravaux() {
-               this.imgCarousel = imgTravaux;
+               this.imgCarousel = imagesTravaux;
                window.scrollTo({
                   top: 0,
                   behavior: 'smooth'
