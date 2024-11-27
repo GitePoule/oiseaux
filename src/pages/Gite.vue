@@ -347,6 +347,7 @@
                   behavior: 'smooth'
            });
         }
+      }
     };
 </script>
 
