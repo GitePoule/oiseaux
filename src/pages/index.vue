@@ -1,8 +1,6 @@
 <template>
 <div>
-
-  <v-parallax :src="welcomeImg"></v-parallax>
-
+
   <v-timeline side="end" style="padding:5px;">
 
     <v-timeline-item dot-color="primary" icon="mdi-calendar">
