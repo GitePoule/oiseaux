@@ -311,7 +311,7 @@
     <p>Avant que votre logement ne prenne sa forme actuelle, il a connu plusieurs décennies sans habitant. Les travaux de rénovation ont débuté en 2020 pour passer d'une maison avec des planchers en terre battue au gîte que vous voyez aujourd'hui.</p><br/>
 
     <div align="center">
-        <v-btn @click="scrollToTop">
+        <v-btn @click="switchTravaux">
         Voir en photos</v-btn>
     </div><br/>
 
@@ -328,7 +328,7 @@
     import equipements from '@/assets/equipments';
     import games from '@/assets/games';
     import images from '@/assets/img/gites';
-
+    let imgTravaux = [];
     export default {
         name: 'Gite',
         data: () => ({
@@ -338,10 +338,12 @@
           sheetEquipmt: false,
           sheetGuide: false,
           sheetGame: false,
-          equipements: equipements
+          equipements: equipements,
+          showImgTravaux: false,
         }),
         methods: {
-           scrollToTop() {
+           switchTravaux() {
+               this.imgCarousel = imgTravaux;
                window.scrollTo({
                   top: 0,
                   behavior: 'smooth'
