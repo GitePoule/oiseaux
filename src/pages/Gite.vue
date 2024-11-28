@@ -23,7 +23,9 @@
       >
         <h3>A l'ombre des oiseaux</h3>
         <br />
-        <p>Logement entier - Bazoches-Lès-Bray (77118)</p>
+        <p>
+           Logement entier - Bazoches-Lès-Bray
+        </p>
         <p>1 lit double - 2 lits simples</p>
         <p style="font-size: 9pt;">Surface de 70m² </p>
         <p style="font-size: 9pt;">Note Gîtes de France ® : 5/5 (Déc. 2024) </p>
