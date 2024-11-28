@@ -4,7 +4,7 @@
     height="100%"
     width="100%"
     hide-delimiter-background
-    show-arrows
+    :show-arrows="false"
   >
     <v-carousel-item>
       <v-sheet color="blue" height="100%">
