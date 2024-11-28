@@ -6,6 +6,13 @@
             width="100%"
             hide-delimiters
         >  
+            <v-btn
+                v-if="showCarBtn"
+                @click="switchGite"
+                style="z-index:1000;position:absolute;top:10px;right:10px;width:80px;"
+            >
+                Close
+            </v-btn>
             <v-carousel-item
                 v-for="(image, index) in imgCarousel" :key="index"
                 :src="image" :alt="'Image ' + index" cover
@@ -337,6 +344,7 @@
         data: () => ({
           tabGuide: 1,
           imgCarousel: images,
+          showCarBtn: false,
           games: games,
           sheetEquipmt: false,
           sheetGuide: false,
@@ -347,11 +355,16 @@
         methods: {
            switchTravaux() {
                this.imgCarousel = imagesTravaux;
+               this.showCarBtn = true;
                window.scrollTo({
                   top: 0,
                   behavior: 'smooth'
-           });
-        }
+              });
+            },
+            switchGite() {
+               this.imgCarousel = images;
+               this.showCarBtn = false;
+            },
       }
     };
 </script>
