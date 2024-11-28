@@ -36,7 +36,7 @@
         <v-empty-state
           headline="Préparer mon séjour"
           title=""
-          icon="mdi-toothbrush"
+          :image="logoOdO"
         >
           <template v-slot:text>
             <v-btn>
@@ -70,12 +70,14 @@
     import welcomeImg from '@/assets/img/gites/home.jpg';
     import logoG2F from "@/assets/img/gites-de-france.png";
     import logo77 from "@/assets/img/logo_77.png";
+    import logoOdO from "@/assets/img/IMG_20241128_234853.jpg'
     export default {
         name: 'Bienvenue',
         data: () => ({
           welcomeImg: welcomeImg,
           logoG2F: logoG2F,
           logo77: logo77,
+          logoOdO: logoOdO,
         })
     };
 </script>
