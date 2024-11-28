@@ -9,9 +9,9 @@
             <v-btn
                 v-if="showCarBtn"
                 @click="switchGite"
-                style="z-index:1000;position:absolute;top:10px;right:10px;width:80px;"
+                density="compact"
+                icon="mdi-arrow-u-left-top"                style="z-index:1000;position:absolute;top:10px;right:10px;width:80px;"
             >
-                Close
             </v-btn>
             <v-carousel-item
                 v-for="(image, index) in imgCarousel" :key="index"
