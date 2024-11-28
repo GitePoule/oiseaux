@@ -10,11 +10,11 @@
       <v-sheet color="blue" height="100%">
         <v-empty-state
           headline="Réserver votre logement"
-          title="Via la plateforme Gites de France"
+          title=""
           :image="logoG2F"
         >
           <template v-slot:text>
-            <v-btn>Réserver</v-btn>
+            <v-btn>Réserver via Gites-De-France</v-btn>
           </template>
         </v-empty-state>
       </v-sheet>
