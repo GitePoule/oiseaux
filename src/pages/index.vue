@@ -22,11 +22,11 @@
     <v-carousel-item>
       <v-sheet color="teal" height="100%">
         <v-empty-state
-          headline="Venir à Bazoches-Lès-Bray"
+          headline="Bazoches-Lès-Bray"
           :image="logo77"
         >
           <template v-slot:text>
-            <v-btn>Voir les itinéraires</v-btn>
+            <v-btn>Comment venir ?</v-btn>
           </template>
         </v-empty-state>
       </v-sheet>
@@ -35,11 +35,13 @@
       <v-sheet color="purple" height="100%">
         <v-empty-state
           headline="Préparer mon séjour"
-          title="En savoir plus sur mon logement"
+          title=""
           icon="mdi-toothbrush"
         >
           <template v-slot:text>
-            <v-btn>Voir les équipements</v-btn>
+            <v-btn>
+               Découvrir mon logement
+            </v-btn>
           </template>
         </v-empty-state>
       </v-sheet>
@@ -48,12 +50,14 @@
       <v-sheet color="red" height="100%">
         <v-empty-state
           headline="Préparer mon séjour"
-          title="Des activités pour tous les goûts !"
+          title=""
           icon="mdi-lightning-bolt"
           color="yellow"
         >
           <template v-slot:text>
-            <v-btn>Voir les itinéraires</v-btn>
+            <v-btn>
+               Découvrir les alentours 
+            </v-btn>
           </template>
         </v-empty-state>
       </v-sheet>
