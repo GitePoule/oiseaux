@@ -70,7 +70,8 @@
     import welcomeImg from '@/assets/img/gites/home.jpg';
     import logoG2F from "@/assets/img/gites-de-france.png";
     import logo77 from "@/assets/img/logo_77.png";
-    import logoOdO from "@/assets/img/IMG_20241128_234853.jpg'
+    import logoOdO from "@/assets/img/IMG_20241128_234853.jpg";
+
     export default {
         name: 'Bienvenue',
         data: () => ({
