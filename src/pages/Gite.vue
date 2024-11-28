@@ -10,7 +10,7 @@
                 v-if="showCarBtn"
                 @click="switchGite"
                 density="compact"
-                icon="mdi-arrow-u-left-top"                style="z-index:1000;position:absolute;top:10px;right:10px;width:80px;"
+                icon="mdi-arrow-u-left-top"                style="z-index:1000;position:absolute;top:10px;right:10px;width:30px;height:30px;"
             >
             </v-btn>
             <v-carousel-item
