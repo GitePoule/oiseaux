@@ -88,7 +88,10 @@
         }),
         computed: {
     carouselHeight() {
-      const toolbarHeight = 64;
+      var toolbarHeight = 64;
+      if (window.innerWidth <= 768) {
+         toolbarHeight = 128;
+      }
       return `calc(100vh - ${toolbarHeight}px)`;
     },
   },
