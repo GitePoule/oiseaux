@@ -7,7 +7,7 @@
         <v-img
         class="align-end text-white"
         height="200"
-        src="https://pitchoun-sorties.fr/wp-content/uploads/2023/03/Provins.jpg"
+        :src="imgTour"
         cover
         >
         <v-card-title> Provins </v-card-title>
@@ -27,8 +27,12 @@
 </template>
 
 <script>
+    import imgTour from '@/assets/img/provins-vue-roseraie.jpg';
     export default {
         name: 'Provins',
+        data: () => ({
+            imgTour: imgTour,  
+        })
     };
 </script>
 
