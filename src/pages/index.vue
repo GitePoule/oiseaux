@@ -85,6 +85,7 @@
           imgBack1: imgBack1,
           imgBack2: imgBack2,
           imgBack3: imgBack3,
+          imgBack4: imgBack4,
         }),
         computed: {
     carouselHeight() {
