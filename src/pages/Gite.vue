@@ -11,7 +11,7 @@
                 color="green"
                 variant="outlined"
                 v-if="showCarBtn"
-                style="z-index:1000;position:absolute;top:10px;left:25px;"
+                style="z-index:1000;position:absolute;top:10px;left:25px;text-shadow: 1px 2px 1px white;"
                 prepend-icon="mdi-account-circle"
                 >
                 Gîte avant travaux
