@@ -1,16 +1,16 @@
 <template>
-  <div height="100%">
+  <div height="100vh" style="position:absolute;top:0px;">
     <v-carousel
     hide-delimiter-background
     :show-arrows="false"
-    :height="carouselHeight"
+    height="100vh"
   >
     <v-carousel-item :src="imgBack1" cover>
       <v-sheet
         class="pa-4 align-center text-center mx-auto"
         color="transparent"
       >
-        <v-img :src="logoG2F" height="200px" style="margin-top: 5%"></v-img>
+        <v-img :src="logoG2F" height="200px" style="margin-top: 125px"></v-img>
         <h2 class="text-h4 mb-6" style="color: white; text-shadow: 2px 3px 2px black; ">
           Réserver votre séjour via Gites-De-France
         </h2>
@@ -24,7 +24,7 @@
         class="pa-4 align-center text-center mx-auto"
         color="transparent"
       >
-        <v-img :src="logo77" height="200px" style="margin-top: 5%"></v-img>
+        <v-img :src="logo77" height="200px" style="margin-top: 125px"></v-img>
         <h2 class="text-h4 mb-6" style="color: white; text-shadow: 2px 3px 2px black; ">
           Se rendre à Bazoches-Lès-Bray
         </h2>
@@ -38,7 +38,7 @@
         class="pa-4 align-center text-center mx-auto"
         color="transparent"
       >
-        <v-img :src="logoOdO" height="200px" style="margin-top: 5%"></v-img>
+        <v-img :src="logoOdO" height="200px" style="margin-top: 125px"></v-img>
         <h2 class="text-h4 mb-6" style="color: white; text-shadow: 2px 3px 2px black; ">
           Préparer mon séjour
         </h2>
@@ -52,7 +52,7 @@
         class="pa-4 align-center text-center mx-auto"
         color="transparent"
       >
-      <v-img :src="logoOdO" height="200px" style="margin-top: 5%"></v-img>
+      <v-img :src="logoOdO" height="200px" style="margin-top: 125px"></v-img>
        <h2 class="text-h4 mb-6" style="color: white; text-shadow: 2px 3px 2px black; ">
           Préparer mon séjour
         </h2>
