@@ -10,7 +10,7 @@
                 class="ma-2"
                 color="white"
                 v-if="showCarBtn"
-                style="z-index:1000;position:absolute;top:25px;left:25px;"
+                style="z-index:1000;position:absolute;top:15px;left:25px;"
                 prepend-icon="mdi-account-circle"
                 >
                 Gîte avant travaux
@@ -28,7 +28,7 @@
                 @click="switchGite"
                 density="compact"
                 icon="mdi-arrow-u-left-top"
-                style="z-index:1000;position:absolute;top:10px;right:25px;width:35px;height:35px;"
+                style="z-index:1000;position:absolute;top:20px;right:25px;width:35px;height:35px;"
             >
             </v-btn>
             <v-carousel-item
