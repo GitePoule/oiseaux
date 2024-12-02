@@ -21,7 +21,7 @@ import image20 from '@/assets/img/travaux/IMG_20200315_142843.jpg';
 import image21 from '@/assets/img/travaux/IMG_20200315_142857.jpg';
 
 const imagesTravaux = [
-  image1, image2, image3, image4, image5, image6, image7, image8, image9, image10,
+  image4, image2, image3, image1, image5, image6, image7, image8, image9, image10,
   image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21
 ];
 
