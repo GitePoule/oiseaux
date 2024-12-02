@@ -10,7 +10,7 @@
                 class="ma-2"
                 color="white"
                 v-if="showCarBtn"
-                style="z-index:1000;position:absolute;top:10px;left:25px;"
+                style="z-index:1000;position:absolute;top:25px;left:25px;"
                 prepend-icon="mdi-account-circle"
                 >
                 Gîte avant travaux
