@@ -11,7 +11,7 @@
                 color="white"
                 v-if="showCarBtn"
                 style="z-index:1000;position:absolute;top:15px;left:25px;"
-                prepend-icon="mdi-account-circle"
+                prepend-icon="mdi-account-hard-hat"
                 >
                 Gîte avant travaux
             </v-chip>
