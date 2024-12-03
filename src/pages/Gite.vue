@@ -14,15 +14,7 @@
                 prepend-icon="mdi-account-circle"
                 >
                 Gîte avant travaux
-            </v-chip>
-            <v-btn
-                v-if="showCarBtn"
-                @click="switchGite"
-                density="compact"
-                icon="mdi-arrow-u-left-top"
-                style="z-index:1000;position:absolute;top:10px;right:25px;width:35px;height:35px;"
-            >
-            </v-btn>
+            </v-chip>
             <v-btn
                 v-if="showCarBtn"
                 @click="switchGite"
