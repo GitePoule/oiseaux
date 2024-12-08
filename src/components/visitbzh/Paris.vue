@@ -20,6 +20,11 @@
         <v-card-text>
         <div>Paris, capitale de la France, est mondialement connue pour ses monuments emblématiques comme la Tour Eiffel, le Louvre et Notre-Dame. Ses quartiers animés, ses musées et ses cafés en font une destination incontournable.</div>
         </v-card-text>
+
+        <v-card-actions>
+            <v-avatar image="https://www.sortiraparis.com/favicon.ico"></v-avatar>
+            <v-btn color="primary" text="Sortir à Paris" href="https://www.sortiraparis.com/"></v-btn>
+        </v-card-actions>
     </v-card>
 </template>
 

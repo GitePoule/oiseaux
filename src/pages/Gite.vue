@@ -14,7 +14,8 @@
                 prepend-icon="mdi-account-hard-hat"
                 >
                 Gîte avant travaux
-            </v-chip>
+            </v-chip>
+
             <v-btn
                 v-if="showCarBtn"
                 @click="switchGite"
@@ -244,9 +245,21 @@
         </v-tabs>
 
         <v-tabs-window v-model="tabGuide">
-            <v-tabs-window-item :value="1" height="600px">Guide 1</v-tabs-window-item>
-            <v-tabs-window-item :value="2" height="600px">Guide 2</v-tabs-window-item>
-            <v-tabs-window-item :value="3" height="600px">Guide 3</v-tabs-window-item>
+            <v-tabs-window-item :value="1" height="600px">
+                <br/><br/><br/>
+                Plus d'information à venir sur l'utilisation du four
+                <br/><br/><br/>
+            </v-tabs-window-item>
+            <v-tabs-window-item :value="2" height="600px">
+                <br/><br/><br/>
+                Plus d'information à venir sur l'utilisation de la télévision
+                <br/><br/><br/>
+            </v-tabs-window-item>
+            <v-tabs-window-item :value="3" height="600px">
+                <br/><br/><br/>
+                Plus d'information à venir sur l'utilisation du wifi
+                <br/><br/><br/>
+            </v-tabs-window-item>
         </v-tabs-window>
         
     </v-card></v-bottom-sheet>
@@ -336,9 +349,11 @@
 
     <br /><v-divider></v-divider>
     <h3>Règlement intérieur</h3><br />
+    <p>Plus d'information à venir</p>
 
     <br /><v-divider></v-divider>
     <h3>Sécurité du logement</h3><br />
+    <p>Plus d'information à venir</p>
 
 </div>
 </template>

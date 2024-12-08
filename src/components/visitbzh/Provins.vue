@@ -21,6 +21,7 @@
         <div>Provins est inscrite au patrimoine mondial de l'UNESCO. Ses remparts, ses tours et ses spectacles médiévaux en font une destination historique unique.</div>
         </v-card-text>
         <v-card-actions>
+            <v-avatar image="https://mairie-provins.fr/wp/wp-content/uploads/2021/11/logo-ville.png"></v-avatar>
             <v-btn color="primary" text="Voir le site" href="https://provins.net/"></v-btn>
         </v-card-actions>
     </v-card>

@@ -20,6 +20,11 @@
         <v-card-text>
         <div>Auxerre, ville historique de l'Yonne, est connue pour sa cathédrale Saint-Étienne et son abbaye Saint-Germain. Ses rues pavées et ses maisons à colombages en font une destination charmante et pittoresque.</div>
         </v-card-text>
+
+        <v-card-actions>
+            <v-avatar image="https://www.aja.fr/wp-content/uploads/2023/01/Groupe-320-1.svg"></v-avatar>
+            <v-btn color="primary" text="Voir le site" href="https://www.auxerre.fr/"></v-btn>
+        </v-card-actions>
     </v-card>
 </template>
 

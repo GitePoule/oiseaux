@@ -1,20 +1,5 @@
 <template>
     <v-container fluid>
-      <v-snackbar
-        v-model="snackbar"
-      >
-        Fonctionnalité pas encore disponible
-
-        <template v-slot:actions>
-          <v-btn
-            color="pink"
-            variant="text"
-            @click="snackbar = false"
-          >
-            Fermer
-          </v-btn>
-        </template>
-      </v-snackbar>
       <v-row dense>
         <v-col cols="12" md="6">
           <v-card>
@@ -28,7 +13,7 @@
               <v-card-title class="text-white">Réserver votre séjour</v-card-title>
             </v-img>
 
-            <v-card-actions>
+            <v-card-actions>
               <v-avatar :image="logoG2F"></v-avatar>
               <v-spacer></v-spacer>
               <v-btn href="https://www.gites-de-france.com/fr/ile-de-france/seine-et-marne/lombre-des-oiseaux-77g624">Réserver</v-btn>
@@ -49,29 +34,21 @@
               <v-card-title class="text-white">Se rendre à Bazoches-Lès-Bray</v-card-title>
             </v-img>
 
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn @click="showCar = !showCar; showTrain = false;" icon="mdi-car" size="small" color="medium-emphasis"></v-btn>
-              <v-btn @click="showCar = false; showTrain = !showTrain;" icon="mdi-train" size="small" color="medium-emphasis"></v-btn>
+            <v-card-actions class="justify-center">
+              <v-btn @click="radioButtonTransport('showCar');" icon="mdi-car" size="small" color="medium-emphasis"></v-btn>
+              <v-btn @click="radioButtonTransport('showTrain')" icon="mdi-train" size="small" color="medium-emphasis"></v-btn>
+              <v-btn @click="radioButtonTransport('showBike')" icon="mdi-bike" size="small" color="medium-emphasis"></v-btn>
             </v-card-actions>
             <v-expand-transition>
               <div v-show="showCar">
                 <v-divider></v-divider>
-                <v-timeline density="compact">
-                  <v-timeline-item size="x-small" dot-color="blue">
+                <v-timeline density="compact" style="margin-left: 5px;">
+                  <v-timeline-item icon="mdi-highway" dot-color="blue">
                     <div class="mb-4">
                       <div class="font-weight-normal">
-                        <strong>Bla</strong> @ Oh
+                        <strong>Par l'autoroute A5</strong>
                       </div>
-                      <div>Comme cela</div>
-                    </div>
-                  </v-timeline-item>
-                  <v-timeline-item size="x-small" dot-color="blue">
-                    <div class="mb-4">
-                      <div class="font-weight-normal">
-                        <strong>Bla</strong> @ Oh
-                      </div>
-                      <div>Comme cela</div>
+                      <div>Sortir à "Marolles sur Seine" ou "Pont sur Yonne"</div>
                     </div>
                   </v-timeline-item>
                 </v-timeline>
@@ -80,10 +57,10 @@
             <v-expand-transition>
               <div v-show="showTrain">
                 <v-divider></v-divider>
-                <v-timeline density="compact">
-                  <v-timeline-item size="medium" dot-color="white">
+                <v-timeline density="compact" style="margin-left: 5px;">
+                  <v-timeline-item size="large" dot-color="white" :fill-dot="true">
                     <template v-slot:icon>
-                      <v-avatar :image="ligneR" size="35" :rounded="false"></v-avatar>
+                      <v-avatar :image="ligneR" size="30" :rounded="false" style="margin-left:3px;"></v-avatar>
                     </template>
                     <div class="mb-4">
                       <div class="font-weight-normal">
@@ -92,33 +69,81 @@
                       <div>Descendre à <strong>Montereau</strong>. Une ligne de bus permet de rejoindre directement Bazoches-Lès-Bray depuis la gare de Montereau-Fault-Yonne.</div>
                     </div>
                   </v-timeline-item>
-                  <v-timeline-item size="medium" dot-color="white">
+                  <v-timeline-item size="large" dot-color="white" :fill-dot="true">
                     <template v-slot:icon>
-                      <v-avatar :image="ligneP" size="29" :rounded="false"></v-avatar>
+                      <v-avatar :image="ligneP" size="30" :rounded="false" style="margin-left:3px;"></v-avatar>
                     </template>
                     <div class="mb-4">
                       <div class="font-weight-normal">
                         Via la ligne P au départ de <strong>Paris</strong>
                       </div>
-                      <div>Descendre à <strong>Provins</strong>. Une ligne de bus permet de rejoindre Bray sur Seine depuis la gare de Provins.</div>
+                      <div>Descendre à <strong>Provins</strong> ou <strong>Longueville</strong>. Une ligne de bus permet de rejoindre Bray sur Seine depuis la gare de Provins.</div>
                     </div>
                   </v-timeline-item>
-                  <v-timeline-item size="x-small" dot-color="blue">
+                  <v-timeline-item icon="mdi-train" dot-color="blue">
                     <div class="mb-4">
                       <div class="font-weight-normal">
                         Via le TER Grand Est en passant par <strong>Troyes</strong>
                       </div>
-                      <div>Comme cela</div>
+                      <div>Descendre à <strong>Nogent sur Seine</strong>. Il vous faudra une voiture ou un covoiture pour rejoindre Bazoches-Lès-Bray.</div>
                     </div>
                   </v-timeline-item>
-                  <v-timeline-item size="x-small" dot-color="blue">
+                  <v-timeline-item icon="mdi-train" dot-color="blue">
                     <div class="mb-4">
                       <div class="font-weight-normal">
                         Via le TER Bourgognes en passant par <strong>Sens</strong>
                       </div>
-                      <div>Comme cela</div>
+                      <div>Descendre à <strong>Sens</strong>. Il vous faudra une voiture ou un covoiture pour rejoindre Bazoches-Lès-Bray.</div>
                     </div>
                   </v-timeline-item>
+                </v-timeline>
+              </div>
+            </v-expand-transition>
+            <v-expand-transition>
+              <div v-show="showBike">
+                <v-divider></v-divider>
+                <v-timeline density="compact" style="margin-left: 5px;">
+                  <v-timeline-item dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        <strong>Depuis la gare de Nangis :</strong>
+                      </div>
+                      <div>Plus d'info à venir</div>
+                    </div>
+                  </v-timeline-item>
+                  <v-timeline-item dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        <strong>Depuis la gare de Longueville :</strong>
+                      </div>
+                      <div>Plus d'info à venir</div>
+                    </div>
+                  </v-timeline-item>
+                  <v-timeline-item dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        <strong>Depuis la gare de Montereau :</strong>
+                      </div>
+                      <div>Plus d'info à venir</div>
+                    </div>
+                  </v-timeline-item>
+                  <v-timeline-item dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        <strong>Depuis la gare de Sens :</strong>
+                      </div>
+                      <div>Plus d'info à venir</div>
+                    </div>
+                  </v-timeline-item>
+                  <v-timeline-item dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        <strong>Depuis la gare de Nogent sur Seine :</strong>
+                      </div>
+                      <div>Plus d'info à venir</div>
+                    </div>
+                  </v-timeline-item>
+
                 </v-timeline>
               </div>
             </v-expand-transition>
@@ -194,18 +219,29 @@
           snackbar: false,
           showCar: false,
           showTrain: false,
+          showBike: false,
           ligneP:ligneP,
           ligneR:ligneR,
         }),
         computed: {
-    carouselHeight() {
-      var toolbarHeight = 64;
-      if (window.innerWidth <= 768) {
-         toolbarHeight = 128;
-      }
-      return `calc(100vh - ${toolbarHeight}px)`;
-    },
-  },
+          carouselHeight() {
+            var toolbarHeight = 64;
+            if (window.innerWidth <= 768) {
+              toolbarHeight = 128;
+            }
+            return `calc(100vh - ${toolbarHeight}px)`;
+          },
+        },
+        methods: {
+          radioButtonTransport(sel) {
+            for (let a of ['showCar', 'showBike', 'showTrain']){
+              if(a != sel){
+                this[a] = false;
+              }
+            }
+            this[sel] = !this[sel];
+          }
+        }
     };
 </script>
 

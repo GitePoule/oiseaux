@@ -23,7 +23,8 @@
         </v-card-text>
 
         <v-card-actions>
-        <v-btn color="orange" text="Voir le site" href="https://www.chateaudefontainebleau.fr"></v-btn>
+            <v-avatar icon="mdi-castle"></v-avatar>
+            <v-btn color="primary" text="Voir le site" href="https://www.chateaudefontainebleau.fr"></v-btn>
         </v-card-actions>
     </v-card>
 

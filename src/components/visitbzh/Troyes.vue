@@ -20,6 +20,11 @@
         <v-card-text>
         <div>Troyes est célèbre pour ses maisons à pans de bois et ses rues pavées. Sa cathédrale gothique et ses nombreux musées en font une destination culturelle incontournable.</div>
         </v-card-text>
+
+        <v-card-actions>
+            <v-avatar image="https://www.ville-troyes.fr/wp-content/uploads/2019/06/logo_fond.png"></v-avatar>
+            <v-btn color="primary" text="Voir le site" href="https://www.ville-troyes.fr/"></v-btn>
+        </v-card-actions>
     </v-card>
 </template>
 
