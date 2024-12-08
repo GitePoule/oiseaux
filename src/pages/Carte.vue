@@ -15,7 +15,7 @@
             </l-marker>
           </div>
         </l-map>
-        <v-card class="map-button" style="position: absolute; top: 10px; left: 10%; right: 10%; width: 80%;">
+        <v-card class="map-button" style="display: none; position: absolute; top: 10px; left: 10%; right: 10%; width: 80%;">
           <v-btn-toggle
             v-model="filters"
             multiple
