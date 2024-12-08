@@ -28,9 +28,9 @@
               <v-card-title class="text-white">Réserver votre séjour</v-card-title>
             </v-img>
 
-            <v-card-actions>
-              <v-spacer></v-spacer>
+            <v-card-actions>
               <v-avatar :image="logoG2F"></v-avatar>
+              <v-spacer></v-spacer>
               <v-btn href="https://www.gites-de-france.com/fr/ile-de-france/seine-et-marne/lombre-des-oiseaux-77g624">Réserver</v-btn>
             </v-card-actions>
           </v-card>
