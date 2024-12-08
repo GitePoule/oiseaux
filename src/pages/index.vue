@@ -1,68 +1,103 @@
 <template>
-  <div height="100vh" style="position:absolute;top:0px;">
-    <v-carousel
-    hide-delimiter-background
-    :show-arrows="false"
-    height="100vh"
-  >
-    <v-carousel-item :src="imgBack1" cover>
-      <v-sheet
-        class="pa-4 align-center text-center mx-auto"
-        color="transparent"
+    <v-container fluid>
+      <v-snackbar
+        v-model="snackbar"
       >
-        <v-img :src="logoG2F" height="200px" style="margin-top: 125px"></v-img>
-        <h2 class="text-h4 mb-6" style="color: white; text-shadow: 2px 3px 2px black; ">
-          Réserver votre séjour via Gites-De-France
-        </h2>
-        <p class="mb-4 text-medium-emphasis text-body-2">
-          <v-btn>Réserver</v-btn>
-        </p>
-      </v-sheet>
-    </v-carousel-item>
-    <v-carousel-item :src="imgBack2" cover>
-      <v-sheet
-        class="pa-4 align-center text-center mx-auto"
-        color="transparent"
-      >
-        <v-img :src="logo77" height="200px" style="margin-top: 125px"></v-img>
-        <h2 class="text-h4 mb-6" style="color: white; text-shadow: 2px 3px 2px black; ">
-          Se rendre à Bazoches-Lès-Bray
-        </h2>
-        <p class="mb-4 text-medium-emphasis text-body-2">
-          <v-btn>Découvrir les itinéraires</v-btn>
-        </p>
-      </v-sheet>
-    </v-carousel-item>
-    <v-carousel-item :src="imgBack3" cover>
-      <v-sheet
-        class="pa-4 align-center text-center mx-auto"
-        color="transparent"
-      >
-        <v-img :src="logoOdO" height="200px" style="margin-top: 125px"></v-img>
-        <h2 class="text-h4 mb-6" style="color: white; text-shadow: 2px 3px 2px black; ">
-          Préparer mon séjour
-        </h2>
-        <p class="mb-4 text-medium-emphasis text-body-2">
-          <v-btn>Découvrir mon logement</v-btn>
-        </p>
-      </v-sheet>
-    </v-carousel-item>
-    <v-carousel-item :src="imgBack4" cover>
-      <v-sheet
-        class="pa-4 align-center text-center mx-auto"
-        color="transparent"
-      >
-      <v-img :src="logoOdO" height="200px" style="margin-top: 125px"></v-img>
-       <h2 class="text-h4 mb-6" style="color: white; text-shadow: 2px 3px 2px black; ">
-          Préparer mon séjour
-        </h2>
-        <p class="mb-4 text-medium-emphasis text-body-2">
-          <v-btn prepend-icon="mdi-lightning-bolt">Découvrir les alentours</v-btn>
-        </p>
-      </v-sheet>
-    </v-carousel-item>
-  </v-carousel>
-  </div>
+        Fonctionnalité pas encore disponible
+
+        <template v-slot:actions>
+          <v-btn
+            color="pink"
+            variant="text"
+            @click="snackbar = false"
+          >
+            Fermer
+          </v-btn>
+        </template>
+      </v-snackbar>
+      <v-row dense>
+        <v-col cols="6">
+          <v-card>
+            <v-img
+              :src="imgBack1"
+              class="align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="300px"
+              cover
+            >
+              <v-card-title class="text-white">Réserver votre séjour</v-card-title>
+            </v-img>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-avatar :image="logoG2F"></v-avatar>
+              <v-btn href="https://www.gites-de-france.com/fr/ile-de-france/seine-et-marne/lombre-des-oiseaux-77g624">Réserver</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+
+
+        <v-col cols="6">
+          <v-card>
+            <v-img
+              :src="imgBack2"
+              class="align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="300px"
+              cover
+            >
+              <v-card-title class="text-white">Se rendre à Bazoches-Lès-Bray</v-card-title>
+            </v-img>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn @click="snackbar = true" icon="mdi-car" size="small" color="medium-emphasis"></v-btn>
+              <v-btn @click="snackbar = true" icon="mdi-train" size="small" color="medium-emphasis"></v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+
+        <v-col cols="12">
+          <v-card>
+            <v-img
+              :src="imgBack3"
+              class="align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="400px"
+              cover
+            >
+              <v-card-title class="text-white">Préparer mon séjour</v-card-title>
+            </v-img>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn href="/gite" prepend-icon="mdi-home-map-marker">Découvrir mon logement</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+
+        <v-col cols="12">
+          <v-card>
+            <v-img
+              :src="imgBack4"
+              class="align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="300px"
+              cover
+            >
+            <v-card-title class="text-white">Préparer mon séjour</v-card-title>
+            </v-img>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn href="/alentours" prepend-icon="mdi-lightning-bolt">Découvrir les alentours</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+
+      </v-row>
+    </v-container>
+
 </template>
 
 <script>
@@ -86,6 +121,7 @@
           imgBack2: imgBack2,
           imgBack3: imgBack3,
           imgBack4: imgBack4,
+          snackbar: false,
         }),
         computed: {
     carouselHeight() {
