@@ -19,7 +19,7 @@
         <v-col cols="12" md="6">
           <v-card>
             <v-img
-              :src="imgBack1"
+              :src="imgBack3"
               class="align-end"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="300px"
@@ -51,16 +51,84 @@
 
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn @click="snackbar = true" icon="mdi-car" size="small" color="medium-emphasis"></v-btn>
-              <v-btn @click="snackbar = true" icon="mdi-train" size="small" color="medium-emphasis"></v-btn>
+              <v-btn @click="showCar = !showCar; showTrain = false;" icon="mdi-car" size="small" color="medium-emphasis"></v-btn>
+              <v-btn @click="showCar = false; showTrain = !showTrain;" icon="mdi-train" size="small" color="medium-emphasis"></v-btn>
             </v-card-actions>
+            <v-expand-transition>
+              <div v-show="showCar">
+                <v-divider></v-divider>
+                <v-timeline density="compact">
+                  <v-timeline-item size="x-small" dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        <strong>Bla</strong> @ Oh
+                      </div>
+                      <div>Comme cela</div>
+                    </div>
+                  </v-timeline-item>
+                  <v-timeline-item size="x-small" dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        <strong>Bla</strong> @ Oh
+                      </div>
+                      <div>Comme cela</div>
+                    </div>
+                  </v-timeline-item>
+                </v-timeline>
+              </div>
+            </v-expand-transition>
+            <v-expand-transition>
+              <div v-show="showTrain">
+                <v-divider></v-divider>
+                <v-timeline density="compact">
+                  <v-timeline-item size="medium" dot-color="white">
+                    <template v-slot:icon>
+                      <v-avatar :image="ligneR" size="35" :rounded="false"></v-avatar>
+                    </template>
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        Via la ligne R au départ de <strong>Paris</strong>
+                      </div>
+                      <div>Descendre à <strong>Montereau</strong>. Une ligne de bus permet de rejoindre directement Bazoches-Lès-Bray depuis la gare de Montereau-Fault-Yonne.</div>
+                    </div>
+                  </v-timeline-item>
+                  <v-timeline-item size="medium" dot-color="white">
+                    <template v-slot:icon>
+                      <v-avatar :image="ligneP" size="29" :rounded="false"></v-avatar>
+                    </template>
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        Via la ligne P au départ de <strong>Paris</strong>
+                      </div>
+                      <div>Descendre à <strong>Provins</strong>. Une ligne de bus permet de rejoindre Bray sur Seine depuis la gare de Provins.</div>
+                    </div>
+                  </v-timeline-item>
+                  <v-timeline-item size="x-small" dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        Via le TER Grand Est en passant par <strong>Troyes</strong>
+                      </div>
+                      <div>Comme cela</div>
+                    </div>
+                  </v-timeline-item>
+                  <v-timeline-item size="x-small" dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        Via le TER Bourgognes en passant par <strong>Sens</strong>
+                      </div>
+                      <div>Comme cela</div>
+                    </div>
+                  </v-timeline-item>
+                </v-timeline>
+              </div>
+            </v-expand-transition>
           </v-card>
         </v-col>
 
         <v-col cols="12">
           <v-card>
             <v-img
-              :src="imgBack3"
+              :src="imgBack1"
               class="align-end"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="400px"
@@ -108,7 +176,9 @@
     import imgBack1 from "@/assets/img/gites/int3.jpg";
     import imgBack2 from "@/assets/img/photo-vtt-bassée.jpg";
     import imgBack3 from "@/assets/img/gites/home.jpg";
-    import imgBack4 from "@/assets/img/canal.jpg";    
+    import imgBack4 from "@/assets/img/canal.jpg"; 
+    import ligneP from "@/assets/img/transport/ligneP.png"   
+    import ligneR from "@/assets/img/transport/ligneR.png"   
 
     export default {
         name: 'Bienvenue',
@@ -122,6 +192,10 @@
           imgBack3: imgBack3,
           imgBack4: imgBack4,
           snackbar: false,
+          showCar: false,
+          showTrain: false,
+          ligneP:ligneP,
+          ligneR:ligneR,
         }),
         computed: {
     carouselHeight() {
