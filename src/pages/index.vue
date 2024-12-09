@@ -48,7 +48,15 @@
                       <div class="font-weight-normal">
                         <strong>Par l'autoroute A5</strong>
                       </div>
-                      <div>Sortir à "Marolles sur Seine" ou "Pont sur Yonne"</div>
+                      <div>Sur l'autoroute A5 en provenance de l'Ouest ou de l'Est, sortir à "Marolles sur Seine".</div>
+                    </div>
+                  </v-timeline-item>
+                  <v-timeline-item icon="mdi-highway" dot-color="blue">
+                    <div class="mb-4">
+                      <div class="font-weight-normal">
+                        <strong>Par l'autoroute A6/A19</strong>
+                      </div>
+                      <div>En provenance de l'A6, prendre l'A19 qui fait la jonction entre A6 et A5. Sortir à "Pont sur Yonne" / "Sens".</div>
                     </div>
                   </v-timeline-item>
                 </v-timeline>
