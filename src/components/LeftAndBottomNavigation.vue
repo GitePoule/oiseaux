@@ -38,7 +38,7 @@
   export default {
     name: 'LeftAndBottomNavigation',
     data: () => ({
-      isMobile: false,
+      isMobile: true,
       idxSelMainMenuItem: 0,
       selMainMenuItem: {
           icon: 'mdi-home-group',
