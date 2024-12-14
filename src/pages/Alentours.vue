@@ -2,10 +2,11 @@
     <div>
         <v-tabs-window v-model="tab">
             <v-tabs-window-item v-for="(cards, name) in this.tabs" :key="name">
-                <div style="margin: 15px;"><component
-                    v-for="(card, index) in cards"
-                    :is="card" :key="name+index"
-                ></component></div>
+                <v-row style="margin: 15px;">
+                    <v-col cols="12" md="4" v-for="(card, index) in cards" :key="name+index">
+                        <component :is="card"></component>
+                    </v-col>
+                </v-row>
                 <v-empty-state
                     v-if="cards.length == 0"
                     headline="Aucun endroit trouvé"

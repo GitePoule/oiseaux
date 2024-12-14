@@ -326,7 +326,6 @@
     <h3>Jardin extérieur</h3><br />
 
     <v-row>
-
         <v-col cols="12" md="4">
             <v-card
                 class="mx-auto"
