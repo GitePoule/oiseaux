@@ -1,6 +1,6 @@
 <template>
     <v-container fluid>
-      <v-row dense>
+      <v-row>
         <v-col cols="12" md="6">
           <v-card>
             <v-img
@@ -68,7 +68,7 @@
                 <v-timeline density="compact" style="margin-left: 5px;">
                   <v-timeline-item size="large" dot-color="white" :fill-dot="true">
                     <template v-slot:icon>
-                      <v-avatar :image="ligneR" size="30" :rounded="false" style="margin-left:3px;"></v-avatar>
+                      <v-avatar :image="ligneR" size="30" :rounded="false" style="margin-left:2px;"></v-avatar>
                     </template>
                     <div class="mb-4">
                       <div class="font-weight-normal">
@@ -79,7 +79,7 @@
                   </v-timeline-item>
                   <v-timeline-item size="large" dot-color="white" :fill-dot="true">
                     <template v-slot:icon>
-                      <v-avatar :image="ligneP" size="30" :rounded="false" style="margin-left:3px;"></v-avatar>
+                      <v-avatar :image="ligneP" size="30" :rounded="false" style="margin-left:2px;"></v-avatar>
                     </template>
                     <div class="mb-4">
                       <div class="font-weight-normal">

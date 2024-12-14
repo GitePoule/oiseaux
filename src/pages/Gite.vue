@@ -81,87 +81,108 @@
     
     <br/>
 
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-chef-hat"
-        subtitle="Équipée"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Cuisine</span>
-        </template>
-    </v-card><br/>
+    <v-row>
+        <v-col cols="12" md="6">
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-chef-hat"
+                subtitle="Équipée"
+                width="250"
+            >
+                <template v-slot:title>
+                <span class="font-weight-black">Cuisine</span>
+                </template>
+            </v-card><br/>
+        </v-col>
 
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-television"
-        subtitle="Android TV"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Salon</span>
-        </template>
-    </v-card><br/>
+        <v-col cols="12" md="6">
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-television"
+                subtitle="Android TV"
+                width="250"
+            >
+                <template v-slot:title>
+                <span class="font-weight-black">Salon</span>
+                </template>
+            </v-card><br/>
+        </v-col>
 
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-shower"
-        subtitle="Douche"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Salle de bain</span>
-        </template>
-    </v-card><br/>
+        <v-col cols="12" md="6">
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-shower"
+                subtitle="Douche"
+                width="250"
+                >
+                <template v-slot:title>
+                <span class="font-weight-black">Salle de bain</span>
+                </template>
+            </v-card><br/>
+        </v-col>
 
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-toilet"
-        subtitle="Papier toilette inclus"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Toilettes 1</span>
-        </template>
-    </v-card>
+        <v-col cols="12" md="6">
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-toilet"
+                subtitle="Papier toilette inclus"
+                width="250"
+                >
+                <template v-slot:title>
+                <span class="font-weight-black">Toilettes 1</span>
+                </template>
+            </v-card>
+        </v-col>
+    </v-row>
 
     <br /><v-divider></v-divider>
     <h3>L'étage</h3>
 
     <br/>
 
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-bed-king"
-        subtitle="1 lit double"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Chambre 1</span>
-        </template>
-    </v-card><br/>
+    <v-row>
 
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-bed"
-        subtitle="2 lits simples"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Chambre 2</span>
-        </template>
-    </v-card><br/>
+        <v-col cols="12" md="4">
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-bed-king"
+                subtitle="1 lit double"
+                width="250"
+            >
+                <template v-slot:title>
+                <span class="font-weight-black">Chambre 1</span>
+                </template>
+            </v-card><br/>
+        </v-col>
 
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-toilet"
-        subtitle="Papier toilette inclus"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Toilettes 2</span>
-        </template>
-    </v-card>
+        <v-col cols="12" md="4">
+
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-bed"
+                subtitle="2 lits simples"
+                width="250"
+            >
+                <template v-slot:title>
+                <span class="font-weight-black">Chambre 2</span>
+                </template>
+            </v-card><br/>
+        </v-col>
+
+        <v-col cols="12" md="4">
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-toilet"
+                subtitle="Papier toilette inclus"
+                width="250"
+            >
+                <template v-slot:title>
+                <span class="font-weight-black">Toilettes 2</span>
+                </template>
+            </v-card>
+        </v-col>
+
+    </v-row>
 
     <br/><br /><v-divider></v-divider>
     <h3>Les équipements du logement</h3><br />
@@ -304,38 +325,45 @@
     <br /><br /><v-divider></v-divider>
     <h3>Jardin extérieur</h3><br />
 
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-grill"
-        subtitle="Orienté au sud-est"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Terrasse extérieure</span>
-        </template>
-    </v-card><br/>
+    <v-row>
 
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-grill"
-        subtitle="Plancha"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Barbecue</span>
-        </template>
-    </v-card><br/>
-
-    <v-card
-        class="mx-auto"
-        prepend-icon="mdi-emoticon-cool"
-        subtitle="Crème solaire non fournie"
-        width="250"
-    >
-        <template v-slot:title>
-        <span class="font-weight-black">Chaises longues</span>
-        </template>
-    </v-card><br/>
+        <v-col cols="12" md="4">
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-grill"
+                subtitle="Orienté au sud-est"
+                width="250"
+            >
+                <template v-slot:title>
+                <span class="font-weight-black">Terrasse extérieure</span>
+                </template>
+            </v-card><br/>
+        </v-col>
+        <v-col cols="12" md="4">
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-grill"
+                subtitle="Plancha"
+                width="250"
+            >
+                <template v-slot:title>
+                <span class="font-weight-black">Barbecue</span>
+                </template>
+            </v-card><br/>
+        </v-col>
+        <v-col cols="12" md="4">
+            <v-card
+                class="mx-auto"
+                prepend-icon="mdi-emoticon-cool"
+                subtitle="Crème solaire non fournie"
+                width="250"
+            >
+                <template v-slot:title>
+                <span class="font-weight-black">Chaises longues</span>
+                </template>
+            </v-card><br/>
+        </v-col>
+    </v-row>
 
     <br /><v-divider></v-divider>
     <h3>Gîte rénové en 2020</h3><br />
@@ -348,12 +376,9 @@
     </div><br/>
 
     <br /><v-divider></v-divider>
-    <h3>Règlement intérieur</h3><br />
-    <p>Plus d'information à venir</p>
-
-    <br /><v-divider></v-divider>
     <h3>Sécurité du logement</h3><br />
     <p>Plus d'information à venir</p>
+    <br /><br /><br />
 
 </div>
 </template>
