@@ -10,7 +10,7 @@
         :src="imgTour"
         cover
         >
-        <v-card-title> Provins </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Provins </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">

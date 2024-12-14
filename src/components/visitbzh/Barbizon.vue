@@ -11,7 +11,7 @@
         src="https://f-f-p.org/wp-content/uploads/2022/01/Aux-portes-de-la-foret-de-Fontainebleau-Credit-photo-Mairie-de-Barbizon-2048x1251.jpg"
         cover
         >
-        <v-card-title> Barbizon </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Barbizon </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">

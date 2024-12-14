@@ -10,7 +10,7 @@
         src="https://cdt89.media.tourinsoft.eu/upload/2017---Cathedrale-de-Sens---Service-Communication-Ville-de-Sens-3-.JPG"
         cover
         >
-        <v-card-title> Sens </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Sens </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">

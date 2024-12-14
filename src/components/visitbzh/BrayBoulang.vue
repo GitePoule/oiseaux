@@ -11,7 +11,7 @@
         src="https://www.terroirettraditions.net/wp-content/uploads/2019/06/baguette.jpeg"
         cover
         >
-        <v-card-title> Boulangerie Patisserie </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Boulangerie Patisserie </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">
@@ -19,7 +19,7 @@
         </v-card-subtitle>
 
         <v-card-text>
-        <div>Depuis des années, cette boulangerie ravit ses clients avec ses produits de qualité. Le pain est délicieux et les pâtisseries, magnifiques et savoureuses, rappellent des souvenirs d'enfance. Le service est rapide et professionnel, même en période de forte affluence. Les gâteaux, notamment le framboisier et le "Royal" au chocolat, sont particulièrement appréciés. La galette à la frangipane est une véritable tuerie, généreuse en crème et au feuilletage réussi.</div>
+        <div>Depuis des années, cette boulangerie ravit ses clients avec ses produits de qualité. Le service est rapide et professionnel, même en période de forte affluence. Les pâtisseries et gâteaux, notamment le framboisier et le "Royal" au chocolat, sont particulièrement appréciés.</div>
         </v-card-text>
 
         <v-card-actions>

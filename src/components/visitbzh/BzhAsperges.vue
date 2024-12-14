@@ -11,7 +11,7 @@
         src="https://champ-ramard.fr/assets/images/apserges_blanches.jpg"
         cover
         >
-        <v-card-title> Ferme Champ-Ramard </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Ferme Champ-Ramard </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">

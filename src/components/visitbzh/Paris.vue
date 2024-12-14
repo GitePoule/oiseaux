@@ -10,7 +10,7 @@
         src="https://www.tripsavvy.com/thmb/YAP8RHHEm1DUNGh-LsOCBnxzoA0=/5000x3520/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-167849334-57bee14a5f9b5855e5baed5c.jpg"
         cover
         >
-        <v-card-title> Paris </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Paris </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">

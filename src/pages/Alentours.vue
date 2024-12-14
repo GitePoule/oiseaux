@@ -33,6 +33,7 @@
     import Troyes from '../components/visitbzh/Troyes.vue';
     import Provins from '../components/visitbzh/Provins.vue';
     import BrayBoulang from '../components/visitbzh/BrayBoulang.vue';
+    import BraySupermarches from '../components/visitbzh/BraySupermarches.vue';
 
     export default {
         name: 'Alentours',  
@@ -52,7 +53,7 @@
                 return a;
             }
             this.tabs = {
-                "#commerces": shuffle([BzhAsperges, BrayBoulang]),
+                "#commerces": shuffle([BraySupermarches, BzhAsperges, BrayBoulang]),
                 "#bazoches": shuffle([]),
                 "#musees": shuffle([]),
                 "#villages": shuffle([Barbizon, Blandy]),

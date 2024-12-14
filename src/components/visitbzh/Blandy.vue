@@ -11,7 +11,7 @@
         src="@/assets/img/blandy.jpg"
         cover
         >
-        <v-card-title> Blandy les Tours </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Blandy les Tours </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">

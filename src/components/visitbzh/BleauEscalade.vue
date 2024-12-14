@@ -10,7 +10,7 @@
         src="https://www.lequipe.fr/_medias/img-photo-jpg/les-blocs-de-gres-des-25-000-hectares-de-la-foret-de-fontainebleau-qui-constitue-le-plus-grand-espa/1500000001363702/0:0,1998:1332-828-552-75/87deb.jpg"
         cover
         >
-        <v-card-title> Escalade</v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Escalade</v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">

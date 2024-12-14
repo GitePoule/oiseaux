@@ -10,7 +10,7 @@
         src="https://www.alaconquetedelest.fr/wp-content/uploads/2019/09/p9210122.jpg"
         cover
         >
-        <v-card-title> Troyes </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Troyes </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">

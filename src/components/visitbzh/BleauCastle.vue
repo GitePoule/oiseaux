@@ -11,7 +11,7 @@
         src="https://www.chateaudefontainebleau.fr/wp-content/uploads/2019/12/fontainebleau.rec.faire-savoir.com-grand-parterre--jerome-schwab-5-scaled.jpg"
         cover
         >
-        <v-card-title> Fontainebleau </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Fontainebleau </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">

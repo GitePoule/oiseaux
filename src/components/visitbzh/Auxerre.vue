@@ -10,7 +10,7 @@
         src="https://www.terre.tv/wp-content/uploads/2022/02/auxerre.jpg"
         cover
         >
-        <v-card-title> Auxerre </v-card-title>
+        <v-card-title style="text-shadow: 1px 1px 2px black;"> Auxerre </v-card-title>
         </v-img>
 
         <v-card-subtitle class="pt-4">
