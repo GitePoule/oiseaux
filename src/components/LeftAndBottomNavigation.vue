@@ -3,7 +3,7 @@
     <div v-if="isMobile">
       <v-bottom-navigation
         v-model="idxSelMainMenuItem"
-        color="teal"
+        color="primary"
         grow
       >
         <v-btn v-for="(item, index) in mainMenuItem" :key="index" :to="item.value">
