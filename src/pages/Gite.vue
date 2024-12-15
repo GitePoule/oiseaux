@@ -135,7 +135,7 @@
         </v-col>
     </v-row>
 
-    <br /><v-divider></v-divider>
+    <br /><br /><v-divider></v-divider>
     <h3>L'étage</h3>
 
     <br/>
@@ -237,7 +237,7 @@
 
         </v-card></v-bottom-sheet>
 
-    <br/><br/><v-divider></v-divider>
+    <br/><br/><br/><v-divider></v-divider>
     <h3>Petits guides d'utilisation</h3><br/>
 
     <v-chip v-for="(e) in ['Four', 'Télévision', 'Wifi']" :key="e.label"  style="margin: 5px;" size="small">
@@ -285,7 +285,7 @@
         
     </v-card></v-bottom-sheet>
 
-    <br /><br /><v-divider></v-divider>
+    <br/><br/><br/><v-divider></v-divider>
     <h3>Jeux de société</h3><br />
 
     <v-chip v-for="(e) in games" :key="e.label" :color="e.color" style="margin: 5px;" variant="flat" size="small">
@@ -322,7 +322,7 @@
         </v-list>
     </v-card></v-bottom-sheet>
     
-    <br /><br /><v-divider></v-divider>
+    <br/><br/><br/><v-divider></v-divider>
     <h3>Jardin extérieur</h3><br />
 
     <v-row>
@@ -364,7 +364,7 @@
         </v-col>
     </v-row>
 
-    <br /><v-divider></v-divider>
+    <br/><br/><v-divider></v-divider>
     <h3>Gîte rénové en 2020</h3><br />
 
     <p>Avant que votre logement ne prenne sa forme actuelle, il a connu plusieurs décennies sans habitant. Les travaux de rénovation ont débuté en 2020 pour passer d'une maison avec des planchers en terre battue au gîte que vous voyez aujourd'hui.</p><br/>
