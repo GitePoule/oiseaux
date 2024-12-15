@@ -60,7 +60,7 @@
                     desc: "Comme Aldi, Carrefour Market est situé à l'opposé de Bray par rapport à Bazoches.",
                 }
             ],
-            selection: 2
+            selection: 1
         })
     };
 </script>
