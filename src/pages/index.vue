@@ -3,11 +3,12 @@
     <v-alert
         v-model="alert"
         color="primary"
-        icon="mdi-bird"
+        icon="mdi-bag-checked"
+        :rounded="false"
         prominent
         closable
       >
-      Bienvenue sur ce site qui a pour but de vous accompagner avant et pendant votre séjour dans le gîte "À l'ombre des oiseaux". Préparez vos valises, votre planning et passez de bons moments à Bazoches-Lès-Bray.
+      Bienvenue sur ce site prévu pour vous accompagner avant et pendant votre séjour. Préparez vos valises, votre planning et passez de bons moments à Bazoches-Lès-Bray.
     </v-alert>
     <v-container fluid>
       <v-row>
