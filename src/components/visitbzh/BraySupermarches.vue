@@ -17,7 +17,7 @@
             mandatory
             v-model="selection"
             selected-class="text-deep-purple-accent-4"
-            style="margin-left: 5px;"
+            style="margin-left: 15px;"
             >
             <v-chip v-for="marque in marques" :key="marque.text" :text="marque.text"></v-chip>
         </v-chip-group>
