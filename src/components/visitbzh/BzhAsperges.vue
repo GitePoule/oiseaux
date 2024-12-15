@@ -23,7 +23,7 @@
         </v-card-text>
 
         <v-card-actions>
-        <v-btn color="orange" text="Voir le site" href="https://champ-ramard.fr"></v-btn>
+            <v-btn color="primary" text="Voir le site" href="https://champ-ramard.fr"></v-btn>
         </v-card-actions>
     </v-card>
 
