@@ -373,7 +373,7 @@
     <p>Avant que votre logement ne prenne sa forme actuelle, il a connu plusieurs décennies sans habitant. Les travaux de rénovation ont débuté en 2020 pour passer d'une maison avec des planchers en terre battue au gîte que vous voyez aujourd'hui.</p><br/>
 
     <div align="center">
-        <v-btn @click="switchTravaux(true)" style="margin-right: 10px;">
+        <v-btn @click="switchTravaux(true)" style="margin: 15px;">
            Photos d'avant travaux
         </v-btn>
         <v-btn @click="switchTravaux(false)">
