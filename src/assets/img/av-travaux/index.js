@@ -18,16 +18,11 @@ import image18 from '@/assets/img/av-travaux/IMG_20200315_142712.jpg';
 import image19 from '@/assets/img/av-travaux/IMG_20200315_142903.jpg';
 import image20 from '@/assets/img/av-travaux/IMG_20200315_142843.jpg';
 import image21 from '@/assets/img/av-travaux/IMG_20200315_142857.jpg';
-import image22 from '@/assets/img/av-travaux/IMG_20200705_102002.jpg';
-import image23 from '@/assets/img/av-travaux/IMG_20200723_081739.jpg';
-import image24 from '@/assets/img/av-travaux/IMG_20200723_081754.jpg';
-import image25 from '@/assets/img/av-travaux/IMG_20200722_132908.jpg';
-import image26 from '@/assets/img/av-travaux/IMG_20200723_081732.jpg';
 
 const imagesAvantTravaux = [
   image4, image2, image3, image1, image5, image6, image7, image8, image9,
   image10, image12, image13, image14, image15, image16, image17, image18,
-  image19, image20, image21, image22, image23, image24, image25, image26
+  image19, image20, image21
 ];
 
 export default imagesAvantTravaux;

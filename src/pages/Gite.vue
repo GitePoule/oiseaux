@@ -1,6 +1,7 @@
 <template>
     <v-card style="border-radius:0px;height:300px;">
         <v-carousel
+            v-model="shownPicture"
             progress="primary"
             height="100%"
             width="100%"
@@ -399,6 +400,7 @@
     export default {
         name: 'Gite',
         data: () => ({
+          shownPicture: 0,
           tabGuide: 1,
           imgCarousel: images,
           showCarBtn: false,
@@ -420,6 +422,7 @@
                 this.imagesDeck = "Gîte pendant travaux";
                }
                this.showCarBtn = true;
+               this.shownPicture = 0;
                window.scrollTo({
                   top: 0,
                   behavior: 'smooth'
@@ -428,6 +431,7 @@
             switchGite() {
                this.imgCarousel = images;
                this.showCarBtn = false;
+               this.shownPicture = 0;
             },
       }
     };
