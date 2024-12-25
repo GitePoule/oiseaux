@@ -7,8 +7,10 @@
             hide-delimiters
         >  
             <v-chip
-                class="ma-2"
+                label
+                class="ma-2 opacity-80"
                 color="white"
+                variant="elevated"
                 v-if="showCarBtn"
                 style="z-index:1000;position:absolute;top:15px;left:25px;"
                 prepend-icon="mdi-account-hard-hat"
