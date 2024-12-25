@@ -1,38 +1,22 @@
-import image1 from '@/assets/img/travaux/IMG_20200315_142819.jpg';
-import image2 from '@/assets/img/travaux/IMG_20200315_142814.jpg';
-import image3 from '@/assets/img/travaux/IMG_20200315_142859.jpg';
-import image4 from '@/assets/img/travaux/IMG_20200315_142838.jpg';
-import image5 from '@/assets/img/travaux/IMG_20200315_142613.jpg';
-import image6 from '@/assets/img/travaux/IMG_20200315_142709.jpg';
-import image7 from '@/assets/img/travaux/IMG_20200315_142753.jpg';
-import image8 from '@/assets/img/travaux/IMG_20200315_142718.jpg';
-import image9 from '@/assets/img/travaux/IMG_20200315_142818.jpg';
-import image10 from '@/assets/img/travaux/IMG_20200315_142833.jpg';
-import image12 from '@/assets/img/travaux/IMG_20200315_142823.jpg';
-import image13 from '@/assets/img/travaux/IMG_20200315_142725.jpg';
-import image14 from '@/assets/img/travaux/IMG_20200315_142728.jpg';
-import image15 from '@/assets/img/travaux/IMG_20200315_142826.jpg';
-import image16 from '@/assets/img/travaux/IMG_20200315_142746.jpg';
-import image17 from '@/assets/img/travaux/IMG_20200315_142706.jpg';
-import image18 from '@/assets/img/travaux/IMG_20200315_142712.jpg';
-import image19 from '@/assets/img/travaux/IMG_20200315_142903.jpg';
-import image20 from '@/assets/img/travaux/IMG_20200315_142843.jpg';
-import image21 from '@/assets/img/travaux/IMG_20200315_142857.jpg';
-import image22 from '@/assets/img/travaux/IMG_20200705_102002.jpg';
-import image23 from '@/assets/img/travaux/IMG_20200723_081739.jpg';
-import image24 from '@/assets/img/travaux/IMG_20200723_081754.jpg';
-import image25 from '@/assets/img/travaux/IMG_20200722_132908.jpg';
-import image26 from '@/assets/img/travaux/IMG_20200723_081732.jpg';
-import image27 from '@/assets/img/travaux/IMG_20211104_095558.jpg';
-import image28 from '@/assets/img/travaux/IMG_20211109_123848.jpg';
-import image29 from '@/assets/img/travaux/IMG_20211112_145320.jpg';
-
+import IMG_20211104_095558 from '@/assets/img/travaux/IMG_20211104_095558.jpg';
+import IMG_20211109_123848 from '@/assets/img/travaux/IMG_20211109_123848.jpg';
+import IMG_20211112_145320 from '@/assets/img/travaux/IMG_20211112_145320.jpg';
+import IMG_20241127_232700 from '@/assets/img/travaux/IMG_20241127_232700.jpg';
+import IMG_20211208_150142 from '@/assets/img/travaux/IMG_20211208_150142.jpg';
+import IMG_20211126_083207 from '@/assets/img/travaux/IMG_20211126_083207.jpg';
+import IMG_20211126_083124 from '@/assets/img/travaux/IMG_20211126_083124.jpg';
+import IMG_20211126_082956 from '@/assets/img/travaux/IMG_20211126_082956.jpg';
+import IMG_20211126_082949 from '@/assets/img/travaux/IMG_20211126_082949.jpg';
+import IMG_20211119_093937 from '@/assets/img/travaux/IMG_20211119_093937.jpg';
+import IMG_20211119_093932 from '@/assets/img/travaux/IMG_20211119_093932.jpg';
+import IMG_20211119_093902 from '@/assets/img/travaux/IMG_20211119_093902.jpg';
+import IMG_20211109_123836 from '@/assets/img/travaux/IMG_20211109_123836.jpg';
 
 const imagesTravaux = [
-  image4, image2, image3, image1, image5, image6, image7, image8, image9,
-  image10, image12, image13, image14, image15, image16, image17, image18,
-  image19, image20, image21, image22, image23, image24, image25, image26,
-  image27, image28, image29
+  IMG_20211104_095558, IMG_20211109_123848, IMG_20211112_145320, IMG_20241127_232700,
+  IMG_20211208_150142, IMG_20211126_083207, IMG_20211126_083124, IMG_20211126_082956,
+  IMG_20211126_082949, IMG_20211119_093937, IMG_20211119_093932, IMG_20211119_093902,
+  IMG_20211109_123836
 ];
 
 export default imagesTravaux;

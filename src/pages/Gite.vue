@@ -15,7 +15,7 @@
                 style="z-index:1000;position:absolute;top:15px;left:25px;"
                 prepend-icon="mdi-account-hard-hat"
                 >
-                Gîte avant travaux
+                {{ this.imagesDeck }}
             </v-chip>
 
             <v-btn
@@ -373,8 +373,12 @@
     <p>Avant que votre logement ne prenne sa forme actuelle, il a connu plusieurs décennies sans habitant. Les travaux de rénovation ont débuté en 2020 pour passer d'une maison avec des planchers en terre battue au gîte que vous voyez aujourd'hui.</p><br/>
 
     <div align="center">
-        <v-btn @click="switchTravaux">
-        Voir en photos</v-btn>
+        <v-btn @click="switchTravaux(true)" style="margin-right: 10px;">
+           Photos d'avant travaux
+        </v-btn>
+        <v-btn @click="switchTravaux(false)">
+           Photos des travaux
+        </v-btn>
     </div><br/>
 
     <br /><v-divider></v-divider>
@@ -389,6 +393,7 @@
     import equipements from '@/assets/equipments';
     import games from '@/assets/games';
     import images from '@/assets/img/gites';
+    import imagesAvantTravaux from '@/assets/img/av-travaux';
     import imagesTravaux from '@/assets/img/travaux';
 
     export default {
@@ -403,10 +408,17 @@
           sheetGame: false,
           equipements: equipements,
           showImgTravaux: false,
+          imagesDeck: ""
         }),
         methods: {
-           switchTravaux() {
-               this.imgCarousel = imagesTravaux;
+           switchTravaux(which) {
+               if(which){
+                this.imgCarousel = imagesAvantTravaux;
+                this.imagesDeck = "Gîte avant travaux";
+               } else {
+                this.imgCarousel = imagesTravaux;
+                this.imagesDeck = "Gîte pendant travaux";
+               }
                this.showCarBtn = true;
                window.scrollTo({
                   top: 0,
