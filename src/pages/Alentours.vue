@@ -18,6 +18,13 @@
                     </template>
                 </v-empty-state>
             </v-tabs-window-item>
+            <v-tabs-window-item key="">
+                <v-row style="margin: 15px;">
+                    <v-col cols="12" md="4" v-for="(card, index) in cards" :key="name+index">
+                        <component :is="card"></component>
+                    </v-col>
+                </v-row>
+            </v-tabs-window-item>
         </v-tabs-window>
     </div>
 </template>
@@ -37,6 +44,7 @@
     import BraySupermarches from '../components/visitbzh/BraySupermarches.vue';
     import BrayBoucherie from '../components/visitbzh/BrayBoucherie.vue';
     import MoretSurLoing from '../components/visitbzh/MoretSurLoing.vue';
+    import Marches from '../components/visitbzh/Marches.vue';
     
     export default {
         name: 'Alentours',  
@@ -56,7 +64,7 @@
                 return a;
             }
             this.tabs = {
-                "#commerces": shuffle([BraySupermarches, BzhAsperges, BrayBoulang, BrayBoucherie]),
+                "#commerces": shuffle([BraySupermarches, BzhAsperges, BrayBoulang, BrayBoucherie, Marches]),
                 "#bazoches": shuffle([]),
                 "#musees": shuffle([]),
                 "#villages": shuffle([Barbizon, Blandy, MoretSurLoing]),

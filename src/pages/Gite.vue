@@ -212,6 +212,7 @@
                 </v-row>
             </v-card-text>
             <v-list>
+                <p style="padding: 20px;">Certains équipements ne seront pas présents dès votre arrivée dans le logement. Ils sont indiqués dans la liste ci-dessous par l'icone <v-icon icon="mdi-chat-question"></v-icon>. N'hésitez pas à nous demander, si besoin, avant ou pendant votre séjour.</p>
                 <div v-for="(e, l, i) in equipements" :key="e">
                     <v-divider v-if="i != 0"></v-divider>
                     <v-list-subheader>{{ e.label }}</v-list-subheader>
