@@ -45,6 +45,7 @@
     import BrayBoucherie from '../components/visitbzh/BrayBoucherie.vue';
     import MoretSurLoing from '../components/visitbzh/MoretSurLoing.vue';
     import Marches from '../components/visitbzh/Marches.vue';
+    import ObservatoireOiseaux from '../components/visitbzh/ObservatoireOiseaux.vue';
     
     export default {
         name: 'Alentours',  
@@ -65,7 +66,7 @@
             }
             this.tabs = {
                 "#commerces": shuffle([BraySupermarches, BzhAsperges, BrayBoulang, BrayBoucherie, Marches]),
-                "#bazoches": shuffle([]),
+                "#bazoches": shuffle([ObservatoireOiseaux]),
                 "#musees": shuffle([]),
                 "#villages": shuffle([Barbizon, Blandy, MoretSurLoing]),
                 "#villes": shuffle([BleauCastle, Sens, Paris, Auxerre, Troyes, Provins]),
