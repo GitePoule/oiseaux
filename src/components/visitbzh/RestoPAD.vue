@@ -18,7 +18,7 @@
         </v-card-subtitle>
 
         <v-card-text>
-        <div>Provins est inscrite au patrimoine mondial de l'UNESCO. Ses remparts, ses tours et ses spectacles médiévaux en font une destination historique unique.</div>
+        <div>Un hamburger avec de bons produits, locaux et des recettes finement élaborées. Nous vous recommandons ! Possibilité pour les végés de remplacer tous les steaks par du fromage.</div>
         </v-card-text>
 
         <v-card-actions>
