@@ -24,15 +24,53 @@
                 @click="switchGite"
                 density="compact"
                 icon="mdi-arrow-u-left-top"
+                style="z-index:1000;position:absolute;top:20px;right:75px;width:35px;height:35px;"
+            >
+            </v-btn>
+
+            <v-btn
+                density="compact"
+                icon="mdi-arrow-expand"
+                @click="dialogPics = true"
                 style="z-index:1000;position:absolute;top:20px;right:25px;width:35px;height:35px;"
             >
             </v-btn>
+
             <v-carousel-item
                 v-for="(image, index) in imgCarousel" :key="index"
                 :src="image" :alt="'Image ' + index" cover
             ></v-carousel-item>
       </v-carousel>
     </v-card>
+
+    <v-dialog v-model="dialogPics">
+        <template v-slot:default="{ isActive }">
+            <v-card
+                prepend-icon="mdi-account-hard-hat"
+                :title="imagesDeck"
+            >
+                <v-carousel
+                    progress="primary"
+                    hide-delimiters
+                    cover
+                >
+                    <v-carousel-item
+                        v-for="(image, index) in imgCarousel" :key="index"
+                        :src="image" :alt="'Image ' + index"
+                    ></v-carousel-item>
+                </v-carousel> 
+
+                <template v-slot:actions>
+                <v-btn
+                    class="ml-auto"
+                    text="Fermer"
+                    @click="dialogPics = false"
+                ></v-btn>
+                </template>
+            </v-card>
+        </template>
+    </v-dialog>
+
   <div style="margin-left: 10%; margin-right: 10%;">
 
     <br />
@@ -410,7 +448,8 @@
           sheetGame: false,
           equipements: equipements,
           showImgTravaux: false,
-          imagesDeck: ""
+          imagesDeck: "Photos du gîte",
+          dialogPics: false
         }),
         methods: {
            switchTravaux(which) {
@@ -432,6 +471,7 @@
                this.imgCarousel = images;
                this.showCarBtn = false;
                this.shownPicture = 0;
+               this.imagesDeck = "Photos du gîte";
             },
       }
     };
