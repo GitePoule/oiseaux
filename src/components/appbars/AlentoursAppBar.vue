@@ -33,7 +33,7 @@
     name: 'AlentoursAppBar',
     data: () => ({
         tabs: [
-          { href: '#commerces', icon: 'mdi-baguette', label: 'Commerces' },
+          { href: '#commerces', icon: 'mdi-baguette', label: 'Faire les courses' },
           { href: '#bazoches', icon: 'mdi-walk', label: 'Proche de Bazoches' },
           { href: '#musees', icon: 'mdi-palette', label: 'Musées' },
           { href: '#villages', icon: 'mdi-map-marker-radius', label: 'Jolis villages' },
