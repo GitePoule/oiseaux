@@ -16,13 +16,12 @@
 
         <v-img
         height="250"
-        :src="imgPAD"
+        :src="imgLaboureur"
         cover
         ></v-img>
 
         <v-card-item>
-        <v-card-title>PAD, la maison de l'hambourgeois</v-card-title>
-
+        <v-card-title>Au bon laboureur</v-card-title>
         <v-card-subtitle>
             <span class="me-1">Produits de qualité</span>
 
@@ -41,7 +40,7 @@
             class="mx-0"
         >
             <v-rating
-            :model-value="4"
+            :model-value="5"
             color="amber"
             density="compact"
             size="small"
@@ -61,12 +60,14 @@
         <br/>
 
         <div class="my-4 text-subtitle-1">
-            € • Burger, Salade, Glace
+            €€€ • Cuisine traditionnelle de saison
         </div>
 
-        <div>Un hamburger avec de bons produits, locaux et des recettes finement élaborées. Nous vous recommandons ! Possibilité pour les végés de remplacer tous les steaks par du fromage.</div>
+        <div>
+            <p>Votre restaurant, hôtel et traiteur à Bray sur Seine est sélectionné par le guide Gault Millau depuis 2011 et le Guide du Routard depuis 1998.</p>
+            <p>Bien situé et au calme, vous apprécierez, sa grande salle à manger pour y déguster la cuisine gourmande du Chef.</p></div>
         </v-card-text>
-
+        
         <div class="px-4 mb-2">
             <v-chip-group v-model="selection" selected-class="bg-deep-purple-lighten-2">
                 <v-chip>
@@ -82,12 +83,12 @@
         </div>
 
         <v-card-actions>
-            <v-btn text="Téléphoner" color="deep-purple-lighten-2" prepend-icon="mdi-phone" href="tel:0164006922"></v-btn>
+            <v-btn text="Téléphoner" color="deep-purple-lighten-2" prepend-icon="mdi-phone" href="tel:0160671081"></v-btn>
             <v-btn
+                prepend-icon="mdi-web"
                 color="deep-purple-lighten-2"
-                prepend-icon="mdi-silverware"
-                text="Voir le menu"
-                @click="show = !show"
+                text="Voir le site"
+                href="http://www.aubonlaboureur.com/"
             ></v-btn>
         </v-card-actions>
         <v-expand-transition>
@@ -101,15 +102,15 @@
 </template>
 
 <script>
-    import imgPAD from '@/assets/img/pad.jpg';
+    import imgLaboureur from '@/assets/img/laboureur.jpg';
     import imgLogo from '@/assets/img/pad_logo.jpg';
     import imgMenu from '@/assets/img/pad_menu.jpg';
 
     export default {
-        name: 'RestoPAD',
+        name: 'RestoLaboureur',
         data: () => ({
             show: false,
-            imgPAD: imgPAD,
+            imgLaboureur: imgLaboureur,
             imgMenu: imgMenu,
             imgLogo: imgLogo,
         })

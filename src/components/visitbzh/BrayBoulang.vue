@@ -23,7 +23,7 @@
         </v-card-text>
 
         <v-card-actions>
-            <v-btn color="primary" text="Téléphoner" href="tel:0160678630"></v-btn>
+            <v-btn color="primary" text="Téléphoner" prepend-icon="mdi-phone" href="tel:0160678630"></v-btn>
             <v-btn color="primary" text="Voir sur Maps" href="https://maps.app.goo.gl/WFu1eFem1rqd7d539"></v-btn>
         </v-card-actions>
     </v-card>

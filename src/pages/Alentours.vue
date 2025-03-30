@@ -48,6 +48,7 @@
     import Marches from '../components/visitbzh/Marches.vue';
     import ObservatoireOiseaux from '../components/visitbzh/ObservatoireOiseaux.vue';
     import RestoPAD from '../components/visitbzh/RestoPAD.vue';
+    import RestoLaboureur from '../components/visitbzh/RestoLaboureur.vue';
 
     export default {
         name: 'Alentours',  
@@ -72,7 +73,7 @@
                 "#musees": shuffle([]),
                 "#villages": shuffle([Barbizon, Blandy, MoretSurLoing]),
                 "#villes": shuffle([BleauCastle, Sens, Paris, Auxerre, Troyes, Provins]),
-                "#restos": shuffle([RestoPAD]),
+                "#restos": shuffle([RestoPAD, RestoLaboureur]),
                 "#sports": shuffle([BleauEscalade])
             }
             this.checkHref();
