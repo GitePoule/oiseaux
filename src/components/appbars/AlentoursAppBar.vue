@@ -39,7 +39,7 @@
           { href: '#villages', icon: 'mdi-map-marker-radius', label: 'Jolis villages' },
           { href: '#villes', icon: 'mdi-castle', label: 'Villes historiques' },
           { href: '#restos', icon: 'mdi-silverware-fork-knife', label: 'Restaurants' },
-          { href: '#sports', icon: 'mdi-bike', label: 'Sport' }
+          { href: '#sports', icon: 'mdi-bike', label: 'Promenade & sport' }
         ],
         tab: null,
         isMobile: false,
